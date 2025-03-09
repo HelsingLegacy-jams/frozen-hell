@@ -13,6 +13,7 @@ namespace Code.Infrastructure.GameStates.States
 
     public void Enter()
     {
+      
       _stateMachine.Enter<GameLoopState>();
     }
   }
