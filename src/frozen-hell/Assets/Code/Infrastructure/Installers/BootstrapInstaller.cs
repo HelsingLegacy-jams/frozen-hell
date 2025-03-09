@@ -1,4 +1,5 @@
 ﻿using Code.Infrastructure.Coroutines;
+using Code.Infrastructure.GameStates.Factory;
 using Zenject;
 
 namespace Code.Infrastructure.Installers
@@ -12,7 +13,14 @@ namespace Code.Infrastructure.Installers
 
     public override void InstallBindings()
     {
+      BindGameStates();
       BindInstaller();
+    }
+
+    private void BindGameStates()
+    {
+      Container.Bind<IStateFactory>().To<StateFactory>().AsSingle();
+      Container.Bind<IStateFactory>().To<StateFactory>().AsSingle();
     }
 
     private void BindInstaller()
