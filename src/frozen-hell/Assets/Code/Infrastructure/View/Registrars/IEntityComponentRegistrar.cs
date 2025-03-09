@@ -3,5 +3,6 @@
   public interface IEntityComponentRegistrar
   {
     void Register();
+    void Unregister();
   }
 }
