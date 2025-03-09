@@ -1,8 +1,10 @@
-﻿using Code.Infrastructure.Coroutines;
+﻿using Code.Infrastructure.AssetManagement;
+using Code.Infrastructure.Coroutines;
 using Code.Infrastructure.GameStates.Factory;
 using Code.Infrastructure.GameStates.Machine;
 using Code.Infrastructure.GameStates.States;
 using Code.Infrastructure.Scenes;
+using Code.Infrastructure.View.Factory;
 using Zenject;
 
 namespace Code.Infrastructure.Installers
@@ -16,14 +18,25 @@ namespace Code.Infrastructure.Installers
 
     public override void InstallBindings()
     {
+      BindInstaller();
+      BindContexts();
       BindInfrastructureServices();
       BindGameStates();
-      BindInstaller();
+      // BindGameplayServices()
+    }
+
+    private void BindContexts()
+    {
+      Container.Bind<Contexts>().FromInstance(Contexts.sharedInstance).AsSingle();
+      Container.Bind<GameContext>().FromInstance(Contexts.sharedInstance.game).AsSingle();
     }
 
     private void BindInfrastructureServices()
     {
       Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
+      Container.Bind<IAssetProvider>().To<AssetProvider>().AsSingle();
+      
+      Container.Bind<IEntityViewFactory>().To<EntityViewFactory>().AsSingle();
     }
 
     private void BindGameStates()

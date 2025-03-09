@@ -8,19 +8,25 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int View = 0;
-    public const int ViewPath = 1;
-    public const int ViewPrefab = 2;
+    public const int Transform = 0;
+    public const int WorldPosition = 1;
+    public const int View = 2;
+    public const int ViewPath = 3;
+    public const int ViewPrefab = 4;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
+        "Transform",
+        "WorldPosition",
         "View",
         "ViewPath",
         "ViewPrefab"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(Code.Common.Gameplay.Common.TransformComponent),
+        typeof(Code.Common.Gameplay.Common.WorldPosition),
         typeof(Code.Common.View),
         typeof(Code.Common.ViewPath),
         typeof(Code.Common.ViewPrefab)
