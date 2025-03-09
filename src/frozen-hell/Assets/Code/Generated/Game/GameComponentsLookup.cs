@@ -6,6 +6,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Code.Gameplay.Common;
+
 public static class GameComponentsLookup {
 
     public const int Transform = 0;
@@ -25,8 +28,8 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(Code.Common.Gameplay.Common.TransformComponent),
-        typeof(Code.Common.Gameplay.Common.WorldPosition),
+        typeof(TransformComponent),
+        typeof(WorldPosition),
         typeof(Code.Common.View),
         typeof(Code.Common.ViewPath),
         typeof(Code.Common.ViewPrefab)
