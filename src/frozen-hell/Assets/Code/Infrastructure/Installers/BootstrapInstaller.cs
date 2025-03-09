@@ -1,4 +1,5 @@
 ﻿using Code.Infrastructure.Coroutines;
+using Code.Infrastructure.GameStates;
 using Code.Infrastructure.GameStates.Factory;
 using Zenject;
 
@@ -20,7 +21,7 @@ namespace Code.Infrastructure.Installers
     private void BindGameStates()
     {
       Container.Bind<IStateFactory>().To<StateFactory>().AsSingle();
-      Container.Bind<IStateFactory>().To<StateFactory>().AsSingle();
+      Container.Bind<IGameStateMachine>().To<GameStateMachine>().AsSingle();
     }
 
     private void BindInstaller()
