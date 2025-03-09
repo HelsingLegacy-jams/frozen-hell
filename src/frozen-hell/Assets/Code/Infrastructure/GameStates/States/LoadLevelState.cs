@@ -1,4 +1,6 @@
-﻿namespace Code.Infrastructure.GameStates.States
+﻿using Code.Infrastructure.GameStates.Machine;
+
+namespace Code.Infrastructure.GameStates.States
 {
   public class LoadLevelState : IState
   {

@@ -1,6 +1,6 @@
 ﻿using Code.Infrastructure.Coroutines;
-using Code.Infrastructure.GameStates;
 using Code.Infrastructure.GameStates.Factory;
+using Code.Infrastructure.GameStates.Machine;
 using Zenject;
 
 namespace Code.Infrastructure.Installers

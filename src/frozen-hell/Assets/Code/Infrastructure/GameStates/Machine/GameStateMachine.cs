@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Code.Infrastructure.GameStates.Factory;
 using Code.Infrastructure.GameStates.States;
 
-namespace Code.Infrastructure.GameStates
+namespace Code.Infrastructure.GameStates.Machine
 {
   public class GameStateMachine : IGameStateMachine
   {
