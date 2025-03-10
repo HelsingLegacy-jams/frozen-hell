@@ -1,7 +1,7 @@
 ﻿using Entitas;
 using UnityEngine;
 
-namespace Code.Gameplay.Features.Survivor.Movement
+namespace Code.Gameplay.Features.Movement
 {
   [Game] public class Moving : IComponent {}
   [Game] public class MovementAvailable : IComponent {}

@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Code.Gameplay.Features.Survivor.Movement.Destination destination { get { return (Code.Gameplay.Features.Survivor.Movement.Destination)GetComponent(GameComponentsLookup.Destination); } }
+    public Code.Gameplay.Features.Movement.Destination destination { get { return (Code.Gameplay.Features.Movement.Destination)GetComponent(GameComponentsLookup.Destination); } }
     public UnityEngine.Vector3 Destination { get { return destination.Value; } }
     public bool hasDestination { get { return HasComponent(GameComponentsLookup.Destination); } }
 
     public GameEntity AddDestination(UnityEngine.Vector3 newValue) {
         var index = GameComponentsLookup.Destination;
-        var component = (Code.Gameplay.Features.Survivor.Movement.Destination)CreateComponent(index, typeof(Code.Gameplay.Features.Survivor.Movement.Destination));
+        var component = (Code.Gameplay.Features.Movement.Destination)CreateComponent(index, typeof(Code.Gameplay.Features.Movement.Destination));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceDestination(UnityEngine.Vector3 newValue) {
         var index = GameComponentsLookup.Destination;
-        var component = (Code.Gameplay.Features.Survivor.Movement.Destination)CreateComponent(index, typeof(Code.Gameplay.Features.Survivor.Movement.Destination));
+        var component = (Code.Gameplay.Features.Movement.Destination)CreateComponent(index, typeof(Code.Gameplay.Features.Movement.Destination));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;
