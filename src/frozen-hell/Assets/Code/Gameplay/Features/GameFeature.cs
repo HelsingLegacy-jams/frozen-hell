@@ -1,4 +1,5 @@
 ﻿using Code.Gameplay.Features.Cameras;
+using Code.Gameplay.Features.Movement;
 using Code.Gameplay.Features.Survivor;
 using Code.Infrastructure.Systems;
 using Code.Infrastructure.View;
@@ -12,6 +13,8 @@ namespace Code.Gameplay.Features
       Add(systems.Create<BindViewFeature>());
       
       Add(systems.Create<SurvivorFeature>());
+      Add(systems.Create<MovementFeature>());
+      
       Add(systems.Create<CameraFeature>());
     }
   }
