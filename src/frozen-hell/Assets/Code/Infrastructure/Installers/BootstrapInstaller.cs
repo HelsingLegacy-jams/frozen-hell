@@ -1,4 +1,5 @@
 ﻿using Code.Gameplay.Common.Collisions;
+using Code.Gameplay.Common.Physics;
 using Code.Infrastructure.AssetManagement;
 using Code.Infrastructure.Coroutines;
 using Code.Infrastructure.EcsRunners.Factory;
@@ -31,6 +32,8 @@ namespace Code.Infrastructure.Installers
     private void BindGameplayServices()
     {
       Container.Bind<ICollisionRegistry>().To<CollisionRegistry>().AsSingle();
+      Container.Bind<IPhysicsService>().To<PhysicsService>().AsSingle();
+      
       Container.Bind<ISystemFactory>().To<SystemFactory>().AsSingle();
 
       Container.Bind<IRunnerFactory>().To<RunnerFactory>().AsSingle();
