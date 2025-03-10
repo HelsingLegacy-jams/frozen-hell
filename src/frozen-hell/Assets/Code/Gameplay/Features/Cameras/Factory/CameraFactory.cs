@@ -1,5 +1,6 @@
 ﻿using Code.Common.Entity;
 using Code.Common.Extensions;
+using Code.Infrastructure.AssetManagement;
 using UnityEngine;
 
 namespace Code.Gameplay.Features.Cameras.Factory
@@ -10,7 +11,7 @@ namespace Code.Gameplay.Features.Cameras.Factory
     {
       return CreateEntity.Empty()
           .AddWorldPosition(Vector3.zero)
-          .AddViewPath("Camera/MainCamera")
+          .AddViewPath(AssetPath.MainCamera)
           
           .AddOffset(0.5f)
           .AddDistance(10f)

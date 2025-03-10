@@ -7,7 +7,7 @@ namespace Code.Infrastructure.EcsRunners
 {
   public class EcsRunner : MonoBehaviour
   {
-    private SurvivorFeature _survivorFeature;
+    private GameFeature _gameFeature;
     private ISystemFactory _systems;
 
     [Inject]
@@ -16,17 +16,17 @@ namespace Code.Infrastructure.EcsRunners
 
     private void Start()
     {
-      _survivorFeature = _systems.Create<SurvivorFeature>();
-      _survivorFeature.Initialize();
+      _gameFeature = _systems.Create<GameFeature>();
+      _gameFeature.Initialize();
     }
 
     private void Update()
     {
-      _survivorFeature.Execute();
-      _survivorFeature.Cleanup();
+      _gameFeature.Execute();
+      _gameFeature.Cleanup();
     }
 
     private void OnDestroy() => 
-      _survivorFeature.TearDown();
+      _gameFeature.TearDown();
   }
 }
