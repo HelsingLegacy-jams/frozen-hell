@@ -18,10 +18,15 @@ public static class GameComponentsLookup {
     public const int MainCamera = 7;
     public const int Offset = 8;
     public const int RotationAngleX = 9;
-    public const int Busy = 10;
-    public const int Survivor = 11;
+    public const int CharacterMover = 10;
+    public const int Destination = 11;
+    public const int MovementAvailable = 12;
+    public const int Moving = 13;
+    public const int Speed = 14;
+    public const int Busy = 15;
+    public const int Survivor = 16;
 
-    public const int TotalComponents = 12;
+    public const int TotalComponents = 17;
 
     public static readonly string[] componentNames = {
         "View",
@@ -34,6 +39,11 @@ public static class GameComponentsLookup {
         "MainCamera",
         "Offset",
         "RotationAngleX",
+        "CharacterMover",
+        "Destination",
+        "MovementAvailable",
+        "Moving",
+        "Speed",
         "Busy",
         "Survivor"
     };
@@ -49,6 +59,11 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Cameras.MainCamera),
         typeof(Code.Gameplay.Features.Cameras.Offset),
         typeof(Code.Gameplay.Features.Cameras.RotationAngleX),
+        typeof(Code.Gameplay.Features.Movement.CharacterMoverComponent),
+        typeof(Code.Gameplay.Features.Movement.Destination),
+        typeof(Code.Gameplay.Features.Movement.MovementAvailable),
+        typeof(Code.Gameplay.Features.Movement.Moving),
+        typeof(Code.Gameplay.Features.Movement.Speed),
         typeof(Code.Gameplay.Features.Survivor.Busy),
         typeof(Code.Gameplay.Features.Survivor.Survivor)
     };
