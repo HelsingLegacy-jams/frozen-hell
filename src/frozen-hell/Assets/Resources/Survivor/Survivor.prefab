@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 6680318343961214312}
   - component: {fileID: 4313750086592155585}
   - component: {fileID: 5760163967891913783}
-  - component: {fileID: 7322586793288440401}
+  - component: {fileID: 6795159808771406224}
   - component: {fileID: 1124905645513225113}
   - component: {fileID: 74243637392296832}
+  - component: {fileID: -2331589465829250244}
+  - component: {fileID: -6674773942981867354}
   m_Layer: 0
   m_Name: Survivor
   m_TagString: Untagged
@@ -89,8 +91,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7322586793288440401
-CapsuleCollider:
+--- !u!143 &6795159808771406224
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -104,14 +106,16 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
+  serializedVersion: 3
   m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1124905645513225113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,3 +141,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityView: {fileID: 1124905645513225113}
+--- !u!114 &-2331589465829250244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6527666931564491074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9ff5ede79c46309f3040c595fe043c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controller: {fileID: 6795159808771406224}
+--- !u!114 &-6674773942981867354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6527666931564491074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272467989e8b4e0ba47ec8099cfdf583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entityView: {fileID: 1124905645513225113}
+  _mover: {fileID: -2331589465829250244}

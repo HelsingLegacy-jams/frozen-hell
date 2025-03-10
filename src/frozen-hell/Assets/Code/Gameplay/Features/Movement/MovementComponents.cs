@@ -1,4 +1,5 @@
-﻿using Entitas;
+﻿using Code.Gameplay.Features.Movement.Behaviours;
+using Entitas;
 using UnityEngine;
 
 namespace Code.Gameplay.Features.Movement
@@ -8,4 +9,5 @@ namespace Code.Gameplay.Features.Movement
   
   [Game] public class Speed : IComponent { public float Value; }
   [Game] public class Destination : IComponent { public Vector3 Value; }
+  [Game] public class CharacterMoverComponent : IComponent { public ICharacterMover Value; }
 }
