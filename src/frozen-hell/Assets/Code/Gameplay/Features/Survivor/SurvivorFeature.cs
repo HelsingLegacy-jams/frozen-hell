@@ -1,13 +1,13 @@
-﻿using Code.Gameplay.Features.Cameras;
+using Code.Gameplay.Features.Survivor.Systems;
 using Code.Infrastructure.Systems;
 
-namespace Code.Gameplay.Features
+namespace Code.Gameplay.Features.Survivor
 {
   public sealed class SurvivorFeature : Feature
   {
     public SurvivorFeature(ISystemFactory systems)
     {
-      Add(systems.Create<CameraFeature>());
+      Add(systems.Create<InitializeSurvivorSystem>());
     }
   }
 }

@@ -1,5 +1,6 @@
 ﻿using Code.Gameplay.Common.Collisions;
 using Code.Gameplay.Common.Physics;
+using Code.Gameplay.Features.Cameras.Factory;
 using Code.Infrastructure.AssetManagement;
 using Code.Infrastructure.Coroutines;
 using Code.Infrastructure.EcsRunners.Factory;
@@ -37,6 +38,8 @@ namespace Code.Infrastructure.Installers
       Container.Bind<ISystemFactory>().To<SystemFactory>().AsSingle();
 
       Container.Bind<IRunnerFactory>().To<RunnerFactory>().AsSingle();
+      
+      Container.Bind<ICameraFactory>().To<CameraFactory>().AsSingle();
     }
 
     private void BindContexts()
