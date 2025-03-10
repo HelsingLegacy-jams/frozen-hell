@@ -21,21 +21,17 @@ namespace Code.Gameplay.Features.Cameras.Systems
       
       _survivor = game.GetGroup(GameMatcher
         .AllOf(
-          GameMatcher.FocusedCamera,
-          GameMatcher.MainCamera,
-          GameMatcher.Transform,
-          GameMatcher.Offset,
-          GameMatcher.Distance,
-          GameMatcher.RotationAngleX));
+          GameMatcher.Survivor,
+          GameMatcher.Transform));
     }
 
     public void Execute()
     {
       foreach (GameEntity camera in _cameras) 
-      // foreach (GameEntity survivor in _survivor)
+      foreach (GameEntity survivor in _survivor)
       {
         Quaternion rotation = Quaternion.Euler(camera.RotationAngleX, 0f, 0f);
-        Vector3 position = rotation * new Vector3(0f, 0f, -camera.Distance) + PositionOffset(camera, camera);
+        Vector3 position = rotation * new Vector3(0f, 0f, -camera.Distance) + PositionOffset(survivor, camera);
         
         camera.Transform.rotation = rotation;
         camera.Transform.position = position;
