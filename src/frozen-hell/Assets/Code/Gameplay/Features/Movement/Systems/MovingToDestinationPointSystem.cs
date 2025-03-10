@@ -3,7 +3,7 @@ using Code.Gameplay.Common.Time;
 using Entitas;
 using UnityEngine;
 
-namespace Code.Gameplay.Features.Movement
+namespace Code.Gameplay.Features.Movement.Systems
 {
   public class MovingToDestinationPointSystem : IExecuteSystem
   {

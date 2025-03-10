@@ -1,3 +1,4 @@
+using Code.Gameplay.Features.Movement.Systems;
 using Code.Infrastructure.Systems;
 
 namespace Code.Gameplay.Features.Movement
@@ -7,6 +8,7 @@ namespace Code.Gameplay.Features.Movement
     public MovementFeature(ISystemFactory systems)
     {
       Add(systems.Create<MovingToDestinationPointSystem>());
+      Add(systems.Create<TurnAlongDirectionSystem>());
     }
   }
 }
