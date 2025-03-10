@@ -9,7 +9,7 @@ namespace Code.Gameplay.Features.Cameras.Factory
     public GameEntity CreateCamera()
     {
       return CreateEntity.Empty()
-          .AddWorldPosition(new Vector3(0f, 2f, -10f))
+          .AddWorldPosition(Vector3.zero)
           .AddViewPath("Camera/MainCamera")
           
           .AddOffset(0.5f)

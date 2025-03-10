@@ -1,4 +1,5 @@
-﻿using Code.Infrastructure.Systems;
+﻿using Code.Gameplay.Features.Cameras;
+using Code.Infrastructure.Systems;
 
 namespace Code.Gameplay.Features
 {
@@ -6,7 +7,7 @@ namespace Code.Gameplay.Features
   {
     public SurvivorFeature(ISystemFactory systems)
     {
-      
+      Add(systems.Create<CameraFeature>());
     }
   }
 }
