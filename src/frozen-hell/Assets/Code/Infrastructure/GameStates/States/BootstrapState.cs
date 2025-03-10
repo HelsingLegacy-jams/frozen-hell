@@ -5,7 +5,7 @@ namespace Code.Infrastructure.GameStates.States
 {
   public class BootstrapState : IState
   {
-    private const string Initial = "Initial";
+    private const string Main = "Main";
     private readonly IGameStateMachine _stateMachine;
     private readonly ISceneLoader _sceneLoader;
 
@@ -17,7 +17,7 @@ namespace Code.Infrastructure.GameStates.States
 
     public void Enter()
     {
-      _sceneLoader.Load(nextScene: Initial, MoveToNextState);
+      _sceneLoader.Load(nextScene: Main, MoveToNextState);
     }
 
     private void MoveToNextState()
