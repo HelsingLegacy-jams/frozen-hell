@@ -1,4 +1,4 @@
-﻿namespace Code.Common.Entities
+﻿namespace Code.Common.Entity
 {
   public static class CreateEntity
   {

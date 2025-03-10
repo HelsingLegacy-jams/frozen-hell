@@ -6,32 +6,44 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.Gameplay.Common;
-
 public static class GameComponentsLookup {
 
-    public const int Transform = 0;
-    public const int WorldPosition = 1;
-    public const int View = 2;
-    public const int ViewPath = 3;
-    public const int ViewPrefab = 4;
+    public const int View = 0;
+    public const int ViewPath = 1;
+    public const int ViewPrefab = 2;
+    public const int Transform = 3;
+    public const int WorldPosition = 4;
+    public const int Distance = 5;
+    public const int FocusedCamera = 6;
+    public const int MainCamera = 7;
+    public const int Offset = 8;
+    public const int RotationAngleX = 9;
 
-    public const int TotalComponents = 5;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
-        "Transform",
-        "WorldPosition",
         "View",
         "ViewPath",
-        "ViewPrefab"
+        "ViewPrefab",
+        "Transform",
+        "WorldPosition",
+        "Distance",
+        "FocusedCamera",
+        "MainCamera",
+        "Offset",
+        "RotationAngleX"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(TransformComponent),
-        typeof(WorldPosition),
         typeof(Code.Common.View),
         typeof(Code.Common.ViewPath),
-        typeof(Code.Common.ViewPrefab)
+        typeof(Code.Common.ViewPrefab),
+        typeof(Code.Gameplay.Common.TransformComponent),
+        typeof(Code.Gameplay.Common.WorldPosition),
+        typeof(Code.Gameplay.Features.Cameras.Distance),
+        typeof(Code.Gameplay.Features.Cameras.FocusedCamera),
+        typeof(Code.Gameplay.Features.Cameras.MainCamera),
+        typeof(Code.Gameplay.Features.Cameras.Offset),
+        typeof(Code.Gameplay.Features.Cameras.RotationAngleX)
     };
 }
