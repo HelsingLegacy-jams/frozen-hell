@@ -2,7 +2,7 @@
 {
   public interface IInputProvider
   {
-    GameEntity Input { get; }
-    void SetInput(GameEntity input);
+    GameEntity Entity { get; }
+    void SetInput(GameEntity entity);
   }
 }

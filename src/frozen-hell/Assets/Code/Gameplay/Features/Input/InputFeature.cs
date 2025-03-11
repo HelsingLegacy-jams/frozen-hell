@@ -1,3 +1,4 @@
+using Code.Gameplay.Features.Input.Systems;
 using Code.Infrastructure.Systems;
 
 namespace Code.Gameplay.Features.Input
@@ -6,7 +7,7 @@ namespace Code.Gameplay.Features.Input
   {
     public InputFeature(ISystemFactory systems)
     {
-      
+      Add(systems.Create<InitializeInputSystem>());
     }
   }
 }

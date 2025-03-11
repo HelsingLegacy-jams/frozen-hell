@@ -2,10 +2,10 @@ namespace Code.Gameplay.Features.Input.Provider
 {
   public class InputProvider : IInputProvider
   {
-    private GameEntity _input;
-    public GameEntity Input => _input;
+    private GameEntity _entity;
+    public GameEntity Entity => _entity;
     
-    public void SetInput(GameEntity input) => 
-      _input = input;
+    public void SetInput(GameEntity entity) => 
+      _entity = entity;
   }
 }
