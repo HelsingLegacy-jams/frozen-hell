@@ -18,15 +18,19 @@ public static class GameComponentsLookup {
     public const int MainCamera = 7;
     public const int Offset = 8;
     public const int RotationAngleX = 9;
-    public const int CharacterMover = 10;
-    public const int Destination = 11;
-    public const int MovementAvailable = 12;
-    public const int Moving = 13;
-    public const int Speed = 14;
-    public const int Busy = 15;
-    public const int Survivor = 16;
+    public const int CursorPosition = 10;
+    public const int Input = 11;
+    public const int Interacted = 12;
+    public const int MovementProvided = 13;
+    public const int CharacterMover = 14;
+    public const int Destination = 15;
+    public const int MovementAvailable = 16;
+    public const int Moving = 17;
+    public const int Speed = 18;
+    public const int Busy = 19;
+    public const int Survivor = 20;
 
-    public const int TotalComponents = 17;
+    public const int TotalComponents = 21;
 
     public static readonly string[] componentNames = {
         "View",
@@ -39,6 +43,10 @@ public static class GameComponentsLookup {
         "MainCamera",
         "Offset",
         "RotationAngleX",
+        "CursorPosition",
+        "Input",
+        "Interacted",
+        "MovementProvided",
         "CharacterMover",
         "Destination",
         "MovementAvailable",
@@ -59,6 +67,10 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Cameras.MainCamera),
         typeof(Code.Gameplay.Features.Cameras.Offset),
         typeof(Code.Gameplay.Features.Cameras.RotationAngleX),
+        typeof(Code.Gameplay.Features.Input.CursorPosition),
+        typeof(Code.Gameplay.Features.Input.Input),
+        typeof(Code.Gameplay.Features.Input.Interacted),
+        typeof(Code.Gameplay.Features.Input.MovementProvided),
         typeof(Code.Gameplay.Features.Movement.CharacterMoverComponent),
         typeof(Code.Gameplay.Features.Movement.Destination),
         typeof(Code.Gameplay.Features.Movement.MovementAvailable),

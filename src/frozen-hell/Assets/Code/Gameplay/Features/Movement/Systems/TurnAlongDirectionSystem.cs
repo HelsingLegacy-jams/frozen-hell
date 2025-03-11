@@ -20,7 +20,10 @@ namespace Code.Gameplay.Features.Movement.Systems
     {
       foreach (GameEntity turner in _turners)
       {
-        turner.Transform.rotation = Quaternion.LookRotation(turner.Destination);
+        Vector3 destination = new Vector3(turner.Destination.x, 0f, turner.Destination.z);
+        Vector3 position = new Vector3(turner.Transform.position.x, 0f, turner.Transform.position.z);
+        
+        turner.Transform.rotation = Quaternion.LookRotation(destination - position);
       }
     }
   }

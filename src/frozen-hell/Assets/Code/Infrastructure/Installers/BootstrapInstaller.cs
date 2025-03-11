@@ -2,6 +2,9 @@
 using Code.Gameplay.Common.Physics;
 using Code.Gameplay.Common.Time;
 using Code.Gameplay.Features.Cameras.Factory;
+using Code.Gameplay.Features.Cameras.Service;
+using Code.Gameplay.Features.Input.Factory;
+using Code.Gameplay.Features.Input.Service;
 using Code.Gameplay.Features.Survivor.Factory;
 using Code.Infrastructure.AssetManagement;
 using Code.Infrastructure.Coroutines;
@@ -41,8 +44,13 @@ namespace Code.Infrastructure.Installers
       Container.Bind<ISystemFactory>().To<SystemFactory>().AsSingle();
 
       Container.Bind<IRunnerFactory>().To<RunnerFactory>().AsSingle();
+
+      Container.Bind<IInputService>().To<InputService>().AsSingle();
+      Container.Bind<IInputFactory>().To<InputFactory>().AsSingle();
       
+      Container.Bind<ICameraService>().To<CameraService>().AsSingle();
       Container.Bind<ICameraFactory>().To<CameraFactory>().AsSingle();
+      
       Container.Bind<ISurvivorFactory>().To<SurvivorFactory>().AsSingle();
     }
 
