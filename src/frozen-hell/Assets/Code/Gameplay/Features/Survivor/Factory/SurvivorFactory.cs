@@ -12,8 +12,11 @@ namespace Code.Gameplay.Features.Survivor.Factory
       return CreateEntity.Empty()
         .AddWorldPosition(initialPosition)
         .AddViewPath(AssetPath.Survivor)
+        
+        .AddSpeed(5f)
 
-        .With(x => x.isSurvivor = true);
+        .With(x => x.isSurvivor = true)
+        .With(x => x.isMovementAvailable = true);
     }
   }
 }
