@@ -1,5 +1,8 @@
 ﻿using Code.Gameplay.Common.Collisions;
 using Code.Gameplay.Common.Physics;
+using Code.Gameplay.Common.Time;
+using Code.Gameplay.Features.Cameras.Factory;
+using Code.Gameplay.Features.Survivor.Factory;
 using Code.Infrastructure.AssetManagement;
 using Code.Infrastructure.Coroutines;
 using Code.Infrastructure.EcsRunners.Factory;
@@ -33,10 +36,14 @@ namespace Code.Infrastructure.Installers
     {
       Container.Bind<ICollisionRegistry>().To<CollisionRegistry>().AsSingle();
       Container.Bind<IPhysicsService>().To<PhysicsService>().AsSingle();
+      Container.Bind<ITimeService>().To<TimeService>().AsSingle();
       
       Container.Bind<ISystemFactory>().To<SystemFactory>().AsSingle();
 
       Container.Bind<IRunnerFactory>().To<RunnerFactory>().AsSingle();
+      
+      Container.Bind<ICameraFactory>().To<CameraFactory>().AsSingle();
+      Container.Bind<ISurvivorFactory>().To<SurvivorFactory>().AsSingle();
     }
 
     private void BindContexts()
