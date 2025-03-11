@@ -10,7 +10,6 @@ namespace Code.Gameplay.Features.Input.Provider
     private const float Epsilon = 0.001f;
     
     private IInputService _input;
-    private Vector2 _lastPosition;
 
     [Inject]
     public void Construct(IInputService input) => 
@@ -20,13 +19,13 @@ namespace Code.Gameplay.Features.Input.Provider
     {
       Vector2 cursorPosition = value.Get<Vector2>();
 
-      if (Vector2.Distance(cursorPosition, Vector2.zero) > Epsilon)
-        _lastPosition = cursorPosition;
+      if (Vector2.Distance(cursorPosition, Vector2.zero) < Epsilon)
+        return;
 
-      _input.Entity.ReplaceCursorPosition(_lastPosition);
+      _input.Entity.ReplaceCursorPosition(cursorPosition);
       _input.Entity.isMovementProvided = true;
       
-      Debug.Log(_lastPosition);
+      Debug.Log(cursorPosition);
     }
   }
 }

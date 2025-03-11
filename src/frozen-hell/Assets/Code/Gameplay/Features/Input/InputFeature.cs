@@ -8,6 +8,10 @@ namespace Code.Gameplay.Features.Input
     public InputFeature(ISystemFactory systems)
     {
       Add(systems.Create<InitializeInputSystem>());
+      
+      Add(systems.Create<InputDestinationProvidingSystem>());
+      
+      Add(systems.Create<CleanupInputSystem>());
     }
   }
 }
