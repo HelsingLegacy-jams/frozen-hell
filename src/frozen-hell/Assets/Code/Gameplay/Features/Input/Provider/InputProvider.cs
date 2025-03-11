@@ -7,8 +7,6 @@ namespace Code.Gameplay.Features.Input.Provider
 {
   public class InputProvider : MonoBehaviour
   {
-    private const float Epsilon = 0.001f;
-    
     private IInputService _input;
 
     [Inject]
@@ -17,15 +15,14 @@ namespace Code.Gameplay.Features.Input.Provider
 
     public void OnMove(InputValue value)
     {
-      Vector2 cursorPosition = value.Get<Vector2>();
-
-      if (Vector2.Distance(cursorPosition, Vector2.zero) < Epsilon)
-        return;
-
-      _input.Entity.ReplaceCursorPosition(cursorPosition);
+      _input.Entity.ReplaceCursorPosition(value.Get<Vector2>());
       _input.Entity.isMovementProvided = true;
-      
-      Debug.Log(cursorPosition);
+    }
+
+    public void OnInteract(InputValue value)
+    {
+      _input.Entity.ReplaceCursorPosition(value.Get<Vector2>());
+      _input.Entity.isInteracted = true;
     }
   }
 }
