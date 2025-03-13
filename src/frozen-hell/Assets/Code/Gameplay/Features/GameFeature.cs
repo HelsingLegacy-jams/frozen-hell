@@ -2,6 +2,7 @@
 using Code.Gameplay.Features.Cameras;
 using Code.Gameplay.Features.Input;
 using Code.Gameplay.Features.Movement;
+using Code.Gameplay.Features.Statuses;
 using Code.Gameplay.Features.Survivor;
 using Code.Infrastructure.Systems;
 using Code.Infrastructure.View;
@@ -20,6 +21,7 @@ namespace Code.Gameplay.Features
       
       Add(systems.Create<CameraFeature>());
       
+      Add(systems.Create<StatusFeature>());
       Add(systems.Create<TimerFeature>());
     }
   }

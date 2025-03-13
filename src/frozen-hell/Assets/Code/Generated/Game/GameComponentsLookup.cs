@@ -32,10 +32,16 @@ public static class GameComponentsLookup {
     public const int MovementAvailable = 21;
     public const int Moving = 22;
     public const int Speed = 23;
-    public const int Busy = 24;
-    public const int Survivor = 25;
+    public const int DeadlyCondition = 24;
+    public const int Increment = 25;
+    public const int Loosed = 26;
+    public const int NotInitialized = 27;
+    public const int StarterCondition = 28;
+    public const int StatusViews = 29;
+    public const int Busy = 30;
+    public const int Survivor = 31;
 
-    public const int TotalComponents = 26;
+    public const int TotalComponents = 32;
 
     public static readonly string[] componentNames = {
         "View",
@@ -62,6 +68,12 @@ public static class GameComponentsLookup {
         "MovementAvailable",
         "Moving",
         "Speed",
+        "DeadlyCondition",
+        "Increment",
+        "Loosed",
+        "NotInitialized",
+        "StarterCondition",
+        "StatusViews",
         "Busy",
         "Survivor"
     };
@@ -91,6 +103,12 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Movement.MovementAvailable),
         typeof(Code.Gameplay.Features.Movement.Moving),
         typeof(Code.Gameplay.Features.Movement.Speed),
+        typeof(Code.Gameplay.Features.Statuses.DeadlyCondition),
+        typeof(Code.Gameplay.Features.Statuses.Increment),
+        typeof(Code.Gameplay.Features.Statuses.Loosed),
+        typeof(Code.Gameplay.Features.Statuses.NotInitialized),
+        typeof(Code.Gameplay.Features.Statuses.StarterCondition),
+        typeof(Code.Gameplay.Features.Statuses.StatusViews),
         typeof(Code.Gameplay.Features.Survivor.Busy),
         typeof(Code.Gameplay.Features.Survivor.Survivor)
     };
