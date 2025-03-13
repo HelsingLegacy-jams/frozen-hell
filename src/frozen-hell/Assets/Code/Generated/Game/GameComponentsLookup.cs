@@ -32,16 +32,25 @@ public static class GameComponentsLookup {
     public const int MovementAvailable = 21;
     public const int Moving = 22;
     public const int Speed = 23;
-    public const int DeadlyCondition = 24;
-    public const int Increment = 25;
-    public const int Loosed = 26;
-    public const int NotInitialized = 27;
-    public const int StarterCondition = 28;
-    public const int StatusViews = 29;
-    public const int Busy = 30;
-    public const int Survivor = 31;
+    public const int InteractorTypeId = 24;
+    public const int Popup = 25;
+    public const int PopupView = 26;
+    public const int ColdView = 27;
+    public const int DeadlyCondition = 28;
+    public const int HungerView = 29;
+    public const int Increment = 30;
+    public const int Loosed = 31;
+    public const int NotInitialized = 32;
+    public const int ReadyToResetCold = 33;
+    public const int ReadyToResetHunger = 34;
+    public const int ReadyToResetThirst = 35;
+    public const int StarterCondition = 36;
+    public const int StatusViews = 37;
+    public const int ThirstView = 38;
+    public const int Busy = 39;
+    public const int Survivor = 40;
 
-    public const int TotalComponents = 32;
+    public const int TotalComponents = 41;
 
     public static readonly string[] componentNames = {
         "View",
@@ -68,12 +77,21 @@ public static class GameComponentsLookup {
         "MovementAvailable",
         "Moving",
         "Speed",
+        "InteractorTypeId",
+        "Popup",
+        "PopupView",
+        "ColdView",
         "DeadlyCondition",
+        "HungerView",
         "Increment",
         "Loosed",
         "NotInitialized",
+        "ReadyToResetCold",
+        "ReadyToResetHunger",
+        "ReadyToResetThirst",
         "StarterCondition",
         "StatusViews",
+        "ThirstView",
         "Busy",
         "Survivor"
     };
@@ -103,12 +121,21 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Movement.MovementAvailable),
         typeof(Code.Gameplay.Features.Movement.Moving),
         typeof(Code.Gameplay.Features.Movement.Speed),
+        typeof(Code.Gameplay.Features.Popups.InteractorTypeIdComponent),
+        typeof(Code.Gameplay.Features.Popups.Popup),
+        typeof(Code.Gameplay.Features.Popups.PopupViewComponent),
+        typeof(Code.Gameplay.Features.Statuses.ColdView),
         typeof(Code.Gameplay.Features.Statuses.DeadlyCondition),
+        typeof(Code.Gameplay.Features.Statuses.HungerView),
         typeof(Code.Gameplay.Features.Statuses.Increment),
         typeof(Code.Gameplay.Features.Statuses.Loosed),
         typeof(Code.Gameplay.Features.Statuses.NotInitialized),
+        typeof(Code.Gameplay.Features.Statuses.ReadyToResetCold),
+        typeof(Code.Gameplay.Features.Statuses.ReadyToResetHunger),
+        typeof(Code.Gameplay.Features.Statuses.ReadyToResetThirst),
         typeof(Code.Gameplay.Features.Statuses.StarterCondition),
         typeof(Code.Gameplay.Features.Statuses.StatusViews),
+        typeof(Code.Gameplay.Features.Statuses.ThirstView),
         typeof(Code.Gameplay.Features.Survivor.Busy),
         typeof(Code.Gameplay.Features.Survivor.Survivor)
     };

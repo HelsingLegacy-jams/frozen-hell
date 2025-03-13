@@ -11,5 +11,8 @@ namespace Code.Gameplay.Features.Statuses.Behaviours
     
     public void Updating(float condition) => 
       _status.fillAmount = condition;
+
+    public void Refresh() => 
+      _status.fillAmount = 0;
   }
 }

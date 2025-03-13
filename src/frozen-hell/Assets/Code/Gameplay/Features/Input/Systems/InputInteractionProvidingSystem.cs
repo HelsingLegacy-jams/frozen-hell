@@ -1,39 +1,32 @@
-﻿using System.Collections.Generic;
-using Code.Gameplay.Common.Physics;
+﻿using Code.Gameplay.Common.Physics;
 using Code.Gameplay.Features.Cameras.Service;
 using Entitas;
-using UnityEngine;
 
 namespace Code.Gameplay.Features.Input.Systems
 {
   public class InputInteractionProvidingSystem : IExecuteSystem
   {
     private readonly IGroup<GameEntity> _inputs;
-    private readonly IGroup<GameEntity> _popups;
-    private readonly List<GameEntity> _buffer = new (1);
+    private readonly IPhysicsService _physics;
+    private readonly ICameraService _camera;
 
-    public InputInteractionProvidingSystem(GameContext game)
+    public InputInteractionProvidingSystem(GameContext game, IPhysicsService physics, ICameraService camera)
     {
+      _physics = physics;
+      _camera = camera;
       _inputs = game.GetGroup(GameMatcher
         .AllOf(
           GameMatcher.Input,
           GameMatcher.Interacted,
           GameMatcher.CursorPosition));
-      
-      _popups = game.GetGroup(GameMatcher
-        .AllOf(
-          // GameMatcher.Popup,
-          GameMatcher.Interacted,
-          GameMatcher.CursorPosition));
-      
     }
 
     public void Execute()
     {
       foreach (GameEntity input in _inputs)
-      foreach (GameEntity popup in _popups.GetEntities(_buffer))
       {
-        
+        GameEntity interactor = _physics.Raycast(input.CursorPosition, _camera.Entity.MainCamera);
+        interactor.isInteracted = true;
       }
     }
   }

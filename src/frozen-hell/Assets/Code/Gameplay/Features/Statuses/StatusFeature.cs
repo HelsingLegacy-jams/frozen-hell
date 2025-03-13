@@ -1,3 +1,4 @@
+using Code.Gameplay.Features.Statuses.Systems;
 using Code.Infrastructure.Systems;
 
 namespace Code.Gameplay.Features.Statuses
@@ -6,7 +7,10 @@ namespace Code.Gameplay.Features.Statuses
   {
     public StatusFeature(ISystemFactory systems)
     {
-      Add(systems.Create<InitializeStatusView>());
+      Add(systems.Create<ResetHungerStatusViewSystem>());
+      Add(systems.Create<ResetThirstStatusViewSystem>());
+      Add(systems.Create<ResetColdStatusViewSystem>());
+      
       Add(systems.Create<StatusUpdateSystem>());
     }
   }

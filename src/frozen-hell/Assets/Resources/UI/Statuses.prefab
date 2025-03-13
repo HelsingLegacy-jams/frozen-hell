@@ -356,10 +356,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityView: {fileID: 5318358114254981300}
-  _statusViews:
-  - {fileID: 2971964971600965725}
-  - {fileID: 1127228080039174153}
-  - {fileID: 3901351739364066109}
+  _hunger: {fileID: 2971964971600965725}
+  _thirst: {fileID: 1127228080039174153}
+  _cold: {fileID: 3901351739364066109}
 --- !u!1 &869008287962820904
 GameObject:
   m_ObjectHideFlags: 0
