@@ -1,3 +1,4 @@
+using Code.Gameplay.Features.Popups.Systems;
 using Code.Infrastructure.Systems;
 
 namespace Code.Gameplay.Features.Popups
@@ -6,7 +7,8 @@ namespace Code.Gameplay.Features.Popups
   {
     public PopupFeature(ISystemFactory systems)
     {
-      
+      Add(systems.Create<ShowPopupSystem>());
+      Add(systems.Create<PopupLookAtCameraSystem>());
     }
   }
 }

@@ -7,9 +7,10 @@ namespace Code.Gameplay.Features.Popups.Behaviours
 {
   public class PopupView : MonoBehaviour
   {
+    [SerializeField] private EntityBehaviour _popupView;
+    
     [SerializeField] private Button BreachButton;
     [SerializeField] private Button ConsumeButton;
-    
     private IEntityView _interactorView;
     private InteractorTypeId _typeId;
 
@@ -22,12 +23,13 @@ namespace Code.Gameplay.Features.Popups.Behaviours
     private void Breaching()
     {
       // _interactorView.Entity.isActive = false;
+      Hide();
     }
 
     private void Consuming()
     {
       // _interactorView.Entity.isActive = false;
-      
+      Hide();
     }
 
 
@@ -38,6 +40,12 @@ namespace Code.Gameplay.Features.Popups.Behaviours
       
       transform.position = targetLocation.AddY();
       gameObject.SetActive(true);
+    }
+
+    public void Hide()
+    {
+      _popupView.Entity.isInactive = true;
+      gameObject.SetActive(false);
     }
   }
 }

@@ -32,25 +32,26 @@ public static class GameComponentsLookup {
     public const int MovementAvailable = 21;
     public const int Moving = 22;
     public const int Speed = 23;
-    public const int InteractorTypeId = 24;
-    public const int Popup = 25;
-    public const int PopupView = 26;
-    public const int ColdView = 27;
-    public const int DeadlyCondition = 28;
-    public const int HungerView = 29;
-    public const int Increment = 30;
-    public const int Loosed = 31;
-    public const int NotInitialized = 32;
-    public const int ReadyToResetCold = 33;
-    public const int ReadyToResetHunger = 34;
-    public const int ReadyToResetThirst = 35;
-    public const int StarterCondition = 36;
-    public const int StatusViews = 37;
-    public const int ThirstView = 38;
-    public const int Busy = 39;
-    public const int Survivor = 40;
+    public const int Inactive = 24;
+    public const int InteractorTypeId = 25;
+    public const int Popup = 26;
+    public const int PopupView = 27;
+    public const int ColdView = 28;
+    public const int DeadlyCondition = 29;
+    public const int HungerView = 30;
+    public const int Increment = 31;
+    public const int Loosed = 32;
+    public const int NotInitialized = 33;
+    public const int ReadyToResetCold = 34;
+    public const int ReadyToResetHunger = 35;
+    public const int ReadyToResetThirst = 36;
+    public const int StarterCondition = 37;
+    public const int StatusViews = 38;
+    public const int ThirstView = 39;
+    public const int Busy = 40;
+    public const int Survivor = 41;
 
-    public const int TotalComponents = 41;
+    public const int TotalComponents = 42;
 
     public static readonly string[] componentNames = {
         "View",
@@ -77,6 +78,7 @@ public static class GameComponentsLookup {
         "MovementAvailable",
         "Moving",
         "Speed",
+        "Inactive",
         "InteractorTypeId",
         "Popup",
         "PopupView",
@@ -121,6 +123,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Movement.MovementAvailable),
         typeof(Code.Gameplay.Features.Movement.Moving),
         typeof(Code.Gameplay.Features.Movement.Speed),
+        typeof(Code.Gameplay.Features.Popups.Inactive),
         typeof(Code.Gameplay.Features.Popups.InteractorTypeIdComponent),
         typeof(Code.Gameplay.Features.Popups.Popup),
         typeof(Code.Gameplay.Features.Popups.PopupViewComponent),
