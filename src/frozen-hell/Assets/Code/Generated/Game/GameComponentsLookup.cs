@@ -11,31 +11,41 @@ public static class GameComponentsLookup {
     public const int View = 0;
     public const int ViewPath = 1;
     public const int ViewPrefab = 2;
-    public const int Transform = 3;
-    public const int WorldPosition = 4;
-    public const int Distance = 5;
-    public const int FocusedCamera = 6;
-    public const int MainCamera = 7;
-    public const int Offset = 8;
-    public const int RotationAngleX = 9;
-    public const int CursorPosition = 10;
-    public const int Input = 11;
-    public const int Interacted = 12;
-    public const int MovementProvided = 13;
-    public const int CharacterMover = 14;
-    public const int Destination = 15;
-    public const int MovementAvailable = 16;
-    public const int Moving = 17;
-    public const int Speed = 18;
-    public const int Busy = 19;
-    public const int Survivor = 20;
+    public const int MaxTime = 3;
+    public const int Minutes = 4;
+    public const int RescueCountdown = 5;
+    public const int Seconds = 6;
+    public const int Time = 7;
+    public const int Transform = 8;
+    public const int WorldPosition = 9;
+    public const int Distance = 10;
+    public const int FocusedCamera = 11;
+    public const int MainCamera = 12;
+    public const int Offset = 13;
+    public const int RotationAngleX = 14;
+    public const int CursorPosition = 15;
+    public const int Input = 16;
+    public const int Interacted = 17;
+    public const int MovementProvided = 18;
+    public const int CharacterMover = 19;
+    public const int Destination = 20;
+    public const int MovementAvailable = 21;
+    public const int Moving = 22;
+    public const int Speed = 23;
+    public const int Busy = 24;
+    public const int Survivor = 25;
 
-    public const int TotalComponents = 21;
+    public const int TotalComponents = 26;
 
     public static readonly string[] componentNames = {
         "View",
         "ViewPath",
         "ViewPrefab",
+        "MaxTime",
+        "Minutes",
+        "RescueCountdown",
+        "Seconds",
+        "Time",
         "Transform",
         "WorldPosition",
         "Distance",
@@ -60,6 +70,11 @@ public static class GameComponentsLookup {
         typeof(Code.Common.View),
         typeof(Code.Common.ViewPath),
         typeof(Code.Common.ViewPrefab),
+        typeof(Code.Gameplay.Common.Time.MaxTime),
+        typeof(Code.Gameplay.Common.Time.Minutes),
+        typeof(Code.Gameplay.Common.Time.RescueCountdownComponent),
+        typeof(Code.Gameplay.Common.Time.Seconds),
+        typeof(Code.Gameplay.Common.Time.Time),
         typeof(Code.Gameplay.Common.TransformComponent),
         typeof(Code.Gameplay.Common.WorldPosition),
         typeof(Code.Gameplay.Features.Cameras.Distance),
