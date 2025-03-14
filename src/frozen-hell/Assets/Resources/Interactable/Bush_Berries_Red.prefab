@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6093944650097683550}
   - component: {fileID: 3491916564098586026}
   - component: {fileID: 8331434522695798640}
+  - component: {fileID: -2667832307289834924}
   m_Layer: 21
   m_Name: Bush_Berries_Red
   m_TagString: Untagged
@@ -108,3 +109,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3158724, y: 0.01, z: 1.2482761}
   m_Center: {x: 0.04895416, y: 0.46806926, z: 0.008348942}
+--- !u!114 &-2667832307289834924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195417438542481674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab448c3423524459bb240000a52b8cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

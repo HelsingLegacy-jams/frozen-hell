@@ -21,7 +21,7 @@ namespace Code.Gameplay.Features.Popups.Systems
     {
       foreach (GameEntity popup in _popups)
       {
-        popup.Transform.LookAt(_camera.Entity.Transform.position);
+        popup.Transform.LookAt(popup.Transform.position - _camera.Entity.Transform.position);
       }
     }
   }

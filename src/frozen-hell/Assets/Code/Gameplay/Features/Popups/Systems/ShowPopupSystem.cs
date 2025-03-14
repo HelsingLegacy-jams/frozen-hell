@@ -1,4 +1,5 @@
-﻿using Entitas;
+﻿using System.Collections.Generic;
+using Entitas;
 
 namespace Code.Gameplay.Features.Popups.Systems
 {
@@ -6,6 +7,7 @@ namespace Code.Gameplay.Features.Popups.Systems
   {
     private readonly IGroup<GameEntity> _interactors;
     private readonly IGroup<GameEntity> _popups;
+    private readonly List<GameEntity> _buffer = new (1);
 
     public ShowPopupSystem(GameContext game)
     {
@@ -25,9 +27,9 @@ namespace Code.Gameplay.Features.Popups.Systems
     public void Execute()
     {
       foreach (GameEntity interactor in _interactors)
-      foreach (GameEntity popup in _popups)
+      foreach (GameEntity popup in _popups.GetEntities(_buffer))
       {
-        popup.PopupView.Show(interactor.WorldPosition, interactor.View, interactor.InteractorTypeId);
+        popup.PopupView.Show(interactor.WorldPosition, interactor.View, interactor.Title);
         popup.isInactive = false;
       }
     }

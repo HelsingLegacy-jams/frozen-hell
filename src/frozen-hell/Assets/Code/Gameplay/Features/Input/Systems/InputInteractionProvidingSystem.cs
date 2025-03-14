@@ -26,6 +26,9 @@ namespace Code.Gameplay.Features.Input.Systems
       foreach (GameEntity input in _inputs)
       {
         GameEntity interactor = _physics.Raycast(input.CursorPosition, _camera.Entity.MainCamera);
+        if (interactor == null)
+          continue;
+        
         interactor.isInteracted = true;
       }
     }

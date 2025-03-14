@@ -1,5 +1,6 @@
 ﻿using Code.Common.Extensions;
 using Code.Infrastructure.View;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,12 +10,12 @@ namespace Code.Gameplay.Features.Popups.Behaviours
   {
     [SerializeField] private EntityBehaviour _popupView;
     
+    [SerializeField] private TextMeshProUGUI _title;
     [SerializeField] private Button BreachButton;
     [SerializeField] private Button ConsumeButton;
     private IEntityView _interactorView;
-    private InteractorTypeId _typeId;
 
-    private void Start()
+    private void Awake()
     {
       BreachButton.onClick.AddListener(Breaching);
       ConsumeButton.onClick.AddListener(Consuming);
@@ -22,22 +23,22 @@ namespace Code.Gameplay.Features.Popups.Behaviours
 
     private void Breaching()
     {
-      // _interactorView.Entity.isActive = false;
+      // _interactorView.Entity.isBreached = true;
       Hide();
     }
 
     private void Consuming()
     {
-      // _interactorView.Entity.isActive = false;
+      // _interactorView.Entity.isConsumed = true;
       Hide();
     }
 
 
-    public void Show(Vector3 targetLocation, IEntityView interactorView, InteractorTypeId TypeId)
+    public void Show(Vector3 targetLocation, IEntityView interactorView, string title)
     {
       _interactorView = interactorView;
-      _typeId = TypeId;
       
+      _title.text = title;
       transform.position = targetLocation.AddY();
       gameObject.SetActive(true);
     }
