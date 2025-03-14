@@ -34,32 +34,33 @@ public static class GameComponentsLookup {
     public const int ConsumeHunger = 23;
     public const int ConsumeThirst = 24;
     public const int InteractorTypeId = 25;
-    public const int Title = 26;
-    public const int CharacterMover = 27;
-    public const int Destination = 28;
-    public const int MovementAvailable = 29;
-    public const int Moving = 30;
-    public const int Speed = 31;
-    public const int Inactive = 32;
-    public const int Popup = 33;
-    public const int PopupView = 34;
-    public const int ColdView = 35;
-    public const int DeadlyCondition = 36;
-    public const int HungerView = 37;
-    public const int Increment = 38;
-    public const int Loosed = 39;
-    public const int NotInitialized = 40;
-    public const int ReadyToResetCold = 41;
-    public const int ReadyToResetHunger = 42;
-    public const int ReadyToResetThirst = 43;
-    public const int StarterCondition = 44;
-    public const int StatusViews = 45;
-    public const int ThirstView = 46;
-    public const int Busy = 47;
-    public const int ReadyToAction = 48;
-    public const int Survivor = 49;
+    public const int ReadyToCleanup = 26;
+    public const int Title = 27;
+    public const int CharacterMover = 28;
+    public const int Destination = 29;
+    public const int MovementAvailable = 30;
+    public const int Moving = 31;
+    public const int Speed = 32;
+    public const int Inactive = 33;
+    public const int Popup = 34;
+    public const int PopupView = 35;
+    public const int ColdView = 36;
+    public const int DeadlyCondition = 37;
+    public const int HungerView = 38;
+    public const int Increment = 39;
+    public const int Loosed = 40;
+    public const int NotInitialized = 41;
+    public const int ReadyToResetCold = 42;
+    public const int ReadyToResetHunger = 43;
+    public const int ReadyToResetThirst = 44;
+    public const int StarterCondition = 45;
+    public const int StatusViews = 46;
+    public const int ThirstView = 47;
+    public const int Busy = 48;
+    public const int ReadyToAction = 49;
+    public const int Survivor = 50;
 
-    public const int TotalComponents = 50;
+    public const int TotalComponents = 51;
 
     public static readonly string[] componentNames = {
         "View",
@@ -88,6 +89,7 @@ public static class GameComponentsLookup {
         "ConsumeHunger",
         "ConsumeThirst",
         "InteractorTypeId",
+        "ReadyToCleanup",
         "Title",
         "CharacterMover",
         "Destination",
@@ -141,6 +143,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Interactors.ConsumeHunger),
         typeof(Code.Gameplay.Features.Interactors.ConsumeThirst),
         typeof(Code.Gameplay.Features.Interactors.InteractorTypeIdComponent),
+        typeof(Code.Gameplay.Features.Interactors.ReadyToCleanup),
         typeof(Code.Gameplay.Features.Interactors.Title),
         typeof(Code.Gameplay.Features.Movement.CharacterMoverComponent),
         typeof(Code.Gameplay.Features.Movement.Destination),

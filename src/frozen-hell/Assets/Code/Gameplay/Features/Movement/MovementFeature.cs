@@ -8,6 +8,7 @@ namespace Code.Gameplay.Features.Movement
     public MovementFeature(ISystemFactory systems)
     {
       Add(systems.Create<MovingToDestinationPointSystem>());
+      Add(systems.Create<MovingToInteractorPositionSystem>());
       Add(systems.Create<TurnAlongDirectionSystem>());
     }
   }

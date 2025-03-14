@@ -6,6 +6,8 @@ namespace Code.Gameplay.Features.Interactors
   [Game] public class Consumed : IComponent {}
   [Game] public class Consumable : IComponent {}
   
+  [Game] public class ReadyToCleanup : IComponent {}
+  
   [Game] public class Title : IComponent { public string Value; }
   
   [Game] public class ConsumeHunger : IComponent { public float Value; }

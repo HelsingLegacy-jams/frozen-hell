@@ -6,6 +6,7 @@ using Code.Gameplay.Features.Cameras.Service;
 using Code.Gameplay.Features.Input.Factory;
 using Code.Gameplay.Features.Input.Service;
 using Code.Gameplay.Features.Survivor.Factory;
+using Code.Gameplay.Features.Survivor.Provider;
 using Code.Infrastructure.AssetManagement;
 using Code.Infrastructure.Coroutines;
 using Code.Infrastructure.EcsRunners.Factory;
@@ -52,6 +53,7 @@ namespace Code.Infrastructure.Installers
       Container.Bind<ICameraFactory>().To<CameraFactory>().AsSingle();
       
       Container.Bind<ISurvivorFactory>().To<SurvivorFactory>().AsSingle();
+      Container.Bind<ISurvivorProvider>().To<SurvivorProvider>().AsSingle();
     }
 
     private void BindContexts()

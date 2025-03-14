@@ -1,8 +1,10 @@
 ﻿using Code.Common.Extensions;
+using Code.Gameplay.Features.Survivor.Provider;
 using Code.Infrastructure.View;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Code.Gameplay.Features.Popups.Behaviours
 {
@@ -13,7 +15,13 @@ namespace Code.Gameplay.Features.Popups.Behaviours
     [SerializeField] private TextMeshProUGUI _title;
     [SerializeField] private Button BreachButton;
     [SerializeField] private Button ConsumeButton;
+    
     private IEntityView _interactorView;
+    private ISurvivorProvider _survivor;
+
+    [Inject]
+    public void Construct(ISurvivorProvider survivor) => 
+      _survivor = survivor;
 
     private void Awake()
     {
@@ -23,13 +31,21 @@ namespace Code.Gameplay.Features.Popups.Behaviours
 
     private void Breaching()
     {
+      _survivor.Entity.AddDestination(_interactorView.Entity.Transform.position);
+      _survivor.Entity.isBusy = true;
+      _survivor.Entity.isMoving = true;
+
       _interactorView.Entity.isBreached = true;
       Hide();
     }
 
     private void Consuming()
     {
-      // _interactorView.Entity.isConsumed = true;
+      _survivor.Entity.AddDestination(_interactorView.Entity.Transform.position);
+      _survivor.Entity.isBusy = true;
+      _survivor.Entity.isMoving = true;
+
+      _interactorView.Entity.isConsumed = true;
       Hide();
     }
 

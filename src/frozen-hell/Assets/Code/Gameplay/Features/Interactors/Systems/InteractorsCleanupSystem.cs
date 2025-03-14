@@ -20,7 +20,7 @@ namespace Code.Gameplay.Features.Interactors.Systems
       {
         interactor.isInteracted = false;
 
-        if (interactor.isBreached || interactor.isConsumed)
+        if (interactor.isReadyToCleanup)
         {
           interactor.isBreached = false;
           interactor.isConsumed = false;
