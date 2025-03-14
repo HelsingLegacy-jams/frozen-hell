@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.Gameplay.Features.Interactors;
-
 public sealed partial class GameMatcher {
 
     static Entitas.IMatcher<GameEntity> _matcherInteractorTypeId;
@@ -37,10 +34,10 @@ public sealed partial class GameMatcher {
 public partial class GameEntity {
 
     public Code.Gameplay.Features.Interactors.InteractorTypeIdComponent interactorTypeId { get { return (Code.Gameplay.Features.Interactors.InteractorTypeIdComponent)GetComponent(GameComponentsLookup.InteractorTypeId); } }
-    public InteractorTypeId InteractorTypeId { get { return interactorTypeId.Value; } }
+    public Code.Gameplay.Features.Interactors.InteractorTypeId InteractorTypeId { get { return interactorTypeId.Value; } }
     public bool hasInteractorTypeId { get { return HasComponent(GameComponentsLookup.InteractorTypeId); } }
 
-    public GameEntity AddInteractorTypeId(InteractorTypeId newValue) {
+    public GameEntity AddInteractorTypeId(Code.Gameplay.Features.Interactors.InteractorTypeId newValue) {
         var index = GameComponentsLookup.InteractorTypeId;
         var component = (Code.Gameplay.Features.Interactors.InteractorTypeIdComponent)CreateComponent(index, typeof(Code.Gameplay.Features.Interactors.InteractorTypeIdComponent));
         component.Value = newValue;
@@ -48,7 +45,7 @@ public partial class GameEntity {
         return this;
     }
 
-    public GameEntity ReplaceInteractorTypeId(InteractorTypeId newValue) {
+    public GameEntity ReplaceInteractorTypeId(Code.Gameplay.Features.Interactors.InteractorTypeId newValue) {
         var index = GameComponentsLookup.InteractorTypeId;
         var component = (Code.Gameplay.Features.Interactors.InteractorTypeIdComponent)CreateComponent(index, typeof(Code.Gameplay.Features.Interactors.InteractorTypeIdComponent));
         component.Value = newValue;

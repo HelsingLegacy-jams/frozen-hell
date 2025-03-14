@@ -1,19 +1,19 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Entitas;
 
 namespace Code.Gameplay.Features.Interactors.Systems
 {
-  public class BreachedInteractorsConsumingSystem : IExecuteSystem
+  public class InteractorsConsumingSystem : IExecuteSystem
   {
     private readonly IGroup<GameEntity> _interactors;
     private readonly IGroup<GameEntity> _survivors;
     private readonly List<GameEntity> _buffer = new (1);
 
-    public BreachedInteractorsConsumingSystem(GameContext game)
+    public InteractorsConsumingSystem(GameContext game)
     {
       _interactors = game.GetGroup(GameMatcher
         .AllOf(
-          GameMatcher.Breached,
+          GameMatcher.Consumed,
           GameMatcher.Consumable,
           GameMatcher.InteractorTypeId));
       
@@ -30,16 +30,15 @@ namespace Code.Gameplay.Features.Interactors.Systems
         switch (interactor.InteractorTypeId)
         {
           case InteractorTypeId.BlueBerries:
-            survivor.AddConsumeHunger(20f);
+            survivor.AddConsumeHunger(-10f);
+            survivor.AddConsumeThirst(-10f);
             break;
           case InteractorTypeId.RedBerries:
-            survivor.AddConsumeHunger(5f);
-            survivor.AddConsumeThirst(20f);
+            survivor.AddConsumeHunger(10f);
             break;
           case InteractorTypeId.Mushrooms:
-            survivor.AddConsumeHunger(25f);
-            survivor.AddConsumeCold(5f);
-            survivor.AddConsumeThirst(-10f);
+            survivor.AddConsumeHunger(-10f);
+            survivor.AddConsumeThirst(20f);
             break;
         }
       }

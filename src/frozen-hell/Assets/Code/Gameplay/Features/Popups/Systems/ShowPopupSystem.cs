@@ -15,7 +15,8 @@ namespace Code.Gameplay.Features.Popups.Systems
         .AllOf(
           GameMatcher.Interacted,
           GameMatcher.WorldPosition,
-          GameMatcher.InteractorTypeId));
+          GameMatcher.InteractorTypeId)
+        .NoneOf(GameMatcher.Inactive));
       
       _popups = game.GetGroup(GameMatcher
         .AllOf(

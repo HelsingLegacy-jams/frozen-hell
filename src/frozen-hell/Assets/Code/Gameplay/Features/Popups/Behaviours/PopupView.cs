@@ -23,7 +23,7 @@ namespace Code.Gameplay.Features.Popups.Behaviours
 
     private void Breaching()
     {
-      // _interactorView.Entity.isBreached = true;
+      _interactorView.Entity.isBreached = true;
       Hide();
     }
 

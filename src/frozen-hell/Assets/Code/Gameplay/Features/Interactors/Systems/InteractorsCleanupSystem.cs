@@ -19,6 +19,13 @@ namespace Code.Gameplay.Features.Interactors.Systems
       foreach (GameEntity interactor in _interactors.GetEntities(_buffer))
       {
         interactor.isInteracted = false;
+
+        if (interactor.isBreached || interactor.isConsumed)
+        {
+          interactor.isBreached = false;
+          interactor.isConsumed = false;
+          interactor.isInactive = true;
+        }
       }
     }
   }

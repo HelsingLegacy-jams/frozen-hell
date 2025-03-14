@@ -7,8 +7,9 @@ namespace Code.Gameplay.Features.Interactors
   {
     public InteractorFeature(ISystemFactory systems)
     {
+      Add(systems.Create<InteractorsConsumingSystem>());
       Add(systems.Create<BreachedInteractorsConsumingSystem>());
-      
+
       Add(systems.Create<InteractorsCleanupSystem>());
     }
   }

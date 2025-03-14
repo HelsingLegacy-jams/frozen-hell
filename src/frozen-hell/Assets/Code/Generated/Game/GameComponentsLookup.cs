@@ -56,9 +56,10 @@ public static class GameComponentsLookup {
     public const int StatusViews = 45;
     public const int ThirstView = 46;
     public const int Busy = 47;
-    public const int Survivor = 48;
+    public const int ReadyToAction = 48;
+    public const int Survivor = 49;
 
-    public const int TotalComponents = 49;
+    public const int TotalComponents = 50;
 
     public static readonly string[] componentNames = {
         "View",
@@ -109,6 +110,7 @@ public static class GameComponentsLookup {
         "StatusViews",
         "ThirstView",
         "Busy",
+        "ReadyToAction",
         "Survivor"
     };
 
@@ -161,6 +163,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Statuses.StatusViews),
         typeof(Code.Gameplay.Features.Statuses.ThirstView),
         typeof(Code.Gameplay.Features.Survivor.Busy),
+        typeof(Code.Gameplay.Features.Survivor.ReadyToAction),
         typeof(Code.Gameplay.Features.Survivor.Survivor)
     };
 }
