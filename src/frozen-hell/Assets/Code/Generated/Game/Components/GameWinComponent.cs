@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherNotInitialized;
+    static Entitas.IMatcher<GameEntity> _matcherWin;
 
-    public static Entitas.IMatcher<GameEntity> NotInitialized {
+    public static Entitas.IMatcher<GameEntity> Win {
         get {
-            if (_matcherNotInitialized == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.NotInitialized);
+            if (_matcherWin == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Win);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherNotInitialized = matcher;
+                _matcherWin = matcher;
             }
 
-            return _matcherNotInitialized;
+            return _matcherWin;
         }
     }
 }
@@ -33,18 +33,18 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.Gameplay.Features.Statuses.NotInitialized notInitializedComponent = new Code.Gameplay.Features.Statuses.NotInitialized();
+    static readonly Code.Gameplay.Features.Popups.Win winComponent = new Code.Gameplay.Features.Popups.Win();
 
-    public bool isNotInitialized {
-        get { return HasComponent(GameComponentsLookup.NotInitialized); }
+    public bool isWin {
+        get { return HasComponent(GameComponentsLookup.Win); }
         set {
-            if (value != isNotInitialized) {
-                var index = GameComponentsLookup.NotInitialized;
+            if (value != isWin) {
+                var index = GameComponentsLookup.Win;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : notInitializedComponent;
+                            : winComponent;
 
                     AddComponent(index, component);
                 } else {

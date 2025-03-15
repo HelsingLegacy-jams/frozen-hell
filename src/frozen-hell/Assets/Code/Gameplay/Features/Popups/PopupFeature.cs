@@ -7,6 +7,8 @@ namespace Code.Gameplay.Features.Popups
   {
     public PopupFeature(ISystemFactory systems)
     {
+      Add(systems.Create<WinPopupSystem>());
+      Add(systems.Create<LoosePopupSystem>());
       Add(systems.Create<ShowPopupSystem>());
       Add(systems.Create<PopupLookAtCameraSystem>());
     }

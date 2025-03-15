@@ -4,6 +4,9 @@ using Entitas;
 
 namespace Code.Gameplay.Features.Popups
 {
+  [Game] public class Win : IComponent {}
+  [Game] public class Loosed : IComponent {}
+  
   [Game] public class Popup : IComponent {}
   [Game] public class Inactive : IComponent {}
   [Game] public class PopupViewComponent : IComponent { public PopupView Value; }

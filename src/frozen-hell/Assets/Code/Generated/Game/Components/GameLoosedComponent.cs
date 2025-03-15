@@ -33,7 +33,7 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.Gameplay.Features.Statuses.Loosed loosedComponent = new Code.Gameplay.Features.Statuses.Loosed();
+    static readonly Code.Gameplay.Features.Popups.Loosed loosedComponent = new Code.Gameplay.Features.Popups.Loosed();
 
     public bool isLoosed {
         get { return HasComponent(GameComponentsLookup.Loosed); }

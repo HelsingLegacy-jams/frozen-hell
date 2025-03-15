@@ -10,6 +10,8 @@ namespace Code.Gameplay.Common.Time
       Add(systems.Create<CountdownSystem>());
       
       Add(systems.Create<ViewCountdownSystem>());
+      
+      Add(systems.Create<WinConditionProvidingSystem>());
     }
   }
 }
