@@ -2,7 +2,7 @@ using Code.Gameplay.Common.Time;
 using Code.Gameplay.Features.Statuses.Behaviours;
 using Entitas;
 
-namespace Code.Gameplay.Features.Statuses
+namespace Code.Gameplay.Features.Statuses.Systems
 {
   public class StatusUpdateSystem : IExecuteSystem
   {

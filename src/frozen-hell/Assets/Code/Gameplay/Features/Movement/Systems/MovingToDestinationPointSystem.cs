@@ -24,7 +24,8 @@ namespace Code.Gameplay.Features.Movement.Systems
           GameMatcher.Transform,
           GameMatcher.Destination,
           GameMatcher.CharacterMover,
-          GameMatcher.MovementAvailable));
+          GameMatcher.MovementAvailable)
+        .NoneOf(GameMatcher.MovingToInteract));
     }
 
     public void Execute()

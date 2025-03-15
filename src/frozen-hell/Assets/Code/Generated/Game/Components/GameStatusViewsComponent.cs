@@ -34,10 +34,10 @@ public sealed partial class GameMatcher {
 public partial class GameEntity {
 
     public Code.Gameplay.Features.Statuses.StatusViews statusViews { get { return (Code.Gameplay.Features.Statuses.StatusViews)GetComponent(GameComponentsLookup.StatusViews); } }
-    public System.Collections.Generic.List<Code.Gameplay.Features.Statuses.Behaviours.IStatusView> StatusViews { get { return statusViews.Value; } }
+    public System.Collections.Generic.List<Code.Gameplay.Features.Statuses.Behaviours.StatusView> StatusViews { get { return statusViews.Value; } }
     public bool hasStatusViews { get { return HasComponent(GameComponentsLookup.StatusViews); } }
 
-    public GameEntity AddStatusViews(System.Collections.Generic.List<Code.Gameplay.Features.Statuses.Behaviours.IStatusView> newValue) {
+    public GameEntity AddStatusViews(System.Collections.Generic.List<Code.Gameplay.Features.Statuses.Behaviours.StatusView> newValue) {
         var index = GameComponentsLookup.StatusViews;
         var component = (Code.Gameplay.Features.Statuses.StatusViews)CreateComponent(index, typeof(Code.Gameplay.Features.Statuses.StatusViews));
         component.Value = newValue;
@@ -45,7 +45,7 @@ public partial class GameEntity {
         return this;
     }
 
-    public GameEntity ReplaceStatusViews(System.Collections.Generic.List<Code.Gameplay.Features.Statuses.Behaviours.IStatusView> newValue) {
+    public GameEntity ReplaceStatusViews(System.Collections.Generic.List<Code.Gameplay.Features.Statuses.Behaviours.StatusView> newValue) {
         var index = GameComponentsLookup.StatusViews;
         var component = (Code.Gameplay.Features.Statuses.StatusViews)CreateComponent(index, typeof(Code.Gameplay.Features.Statuses.StatusViews));
         component.Value = newValue;

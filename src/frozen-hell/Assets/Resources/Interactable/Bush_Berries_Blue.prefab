@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 3854186717493536752}
   - component: {fileID: 1326552978663972891}
   - component: {fileID: 5490468549948569999}
+  - component: {fileID: 2153564431913571215}
+  - component: {fileID: -3556079038459620534}
+  - component: {fileID: 4783989339285614492}
   m_Layer: 21
   m_Name: Bush_Berries_Blue
   m_TagString: Untagged
@@ -28,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7632167619194843930}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7306664, y: -0.64381504, z: 11.465254}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108,3 +111,44 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9977557, y: 0.01, z: 0.9697168}
   m_Center: {x: 0.037278205, y: 0.5630503, z: -0.005373016}
+--- !u!114 &2153564431913571215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632167619194843930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab448c3423524459bb240000a52b8cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3556079038459620534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632167619194843930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547528dc3a434578b95e6c8811c1eec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entityView: {fileID: 2153564431913571215}
+--- !u!114 &4783989339285614492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632167619194843930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4c2b931b5d4d88a58d02e76fb21d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entityView: {fileID: 2153564431913571215}
+  _title: Poisonus Berries
+  _interactorTypeId: 10
+  _isConsumable: 1

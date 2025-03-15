@@ -4,5 +4,6 @@
   {
     float ViewCondition { get; }
     void Updating(float condition);
+    void Refresh();
   }
 }
