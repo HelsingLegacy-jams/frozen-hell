@@ -3,16 +3,17 @@ using Entitas;
 
 namespace Code.Gameplay.Features.Survivor.Systems
 {
-  public class SurvivorAnimationProvidingSystem : IExecuteSystem
+  public class SurvivorActionAnimationProvidingSystem : IExecuteSystem
   {
     private readonly IGroup<GameEntity> _survivors;
     private readonly List<GameEntity> _buffer = new (1);
 
-    public SurvivorAnimationProvidingSystem(GameContext game)
+    public SurvivorActionAnimationProvidingSystem(GameContext game)
     {
       _survivors = game.GetGroup(GameMatcher
         .AllOf(
           GameMatcher.Survivor, 
+          GameMatcher.ReadyToAction, 
           GameMatcher.AnimationTypeId, 
           GameMatcher.SurvivorAnimator));
     }
@@ -23,12 +24,11 @@ namespace Code.Gameplay.Features.Survivor.Systems
       {
         switch (survivor.AnimationTypeId)
         {
-          case AnimationTypeId.Idle:
-            survivor.SurvivorAnimator.ResetAbility();
-            survivor.SurvivorAnimator.PlayIdle();
+          case AnimationTypeId.Breach:
+            survivor.SurvivorAnimator.PlayBreaching();
             break;
-          case AnimationTypeId.Move:
-            survivor.SurvivorAnimator.PlayMove();
+          case AnimationTypeId.Collect:
+            survivor.SurvivorAnimator.PlayCollecting();
             break;
         }
 

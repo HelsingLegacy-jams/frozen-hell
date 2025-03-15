@@ -17,12 +17,14 @@ namespace Code.Gameplay.Features.Survivor.Behaviours
     
     public void PlayBreaching()
     {
+      _animator.SetBool(_isMovingHash, false);
       _animator.SetBool(_isPerformingActionHash, true);
       _animator.SetTrigger(_breachingHash);
     }
     
     public void PlayCollecting()
     {
+      _animator.SetBool(_isMovingHash, false);
       _animator.SetBool(_isPerformingActionHash, true);
       _animator.SetTrigger(_collectingHash);
     }

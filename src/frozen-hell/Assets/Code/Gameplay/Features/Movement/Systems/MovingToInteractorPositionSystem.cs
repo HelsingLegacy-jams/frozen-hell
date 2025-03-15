@@ -43,6 +43,8 @@ namespace Code.Gameplay.Features.Movement.Systems
               _physics.Gravity);
         else
         {
+          mover.AddAnimationTypeId(mover.PromiseAnimationId);
+          mover.RemovePromiseAnimationId();
           mover.isReadyToAction = true;
           mover.RemoveDestination();
           mover.isMovingToInteract = false;
