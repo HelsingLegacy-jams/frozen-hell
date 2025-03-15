@@ -12,5 +12,6 @@ namespace Code.Gameplay.Common.Physics
       CollisionLayer layer = CollisionLayer.Interactable);
 
     Vector3 Gravity { get; }
+    GameEntity SphereCast(Vector3 position, float radius, int layerMask);
   }
 }

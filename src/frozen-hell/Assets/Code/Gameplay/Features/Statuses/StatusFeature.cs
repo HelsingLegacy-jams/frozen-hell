@@ -7,11 +7,15 @@ namespace Code.Gameplay.Features.Statuses
   {
     public StatusFeature(ISystemFactory systems)
     {
-      Add(systems.Create<ResetHungerStatusViewSystem>());
-      Add(systems.Create<ResetThirstStatusViewSystem>());
-      Add(systems.Create<ResetColdStatusViewSystem>());
+      Add(systems.Create<StatusResetSystem>());
+      
+      Add(systems.Create<ConsumptionHungerStatusViewSystem>());
+      Add(systems.Create<ConsumptionThirstStatusViewSystem>());
+      Add(systems.Create<ConsumptionColdStatusViewSystem>());
       
       Add(systems.Create<StatusUpdateSystem>());
+      
+      Add(systems.Create<CleanupStatusSystem>());
     }
   }
 }
