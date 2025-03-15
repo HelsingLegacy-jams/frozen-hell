@@ -13,6 +13,7 @@ using Code.Infrastructure.EcsRunners.Factory;
 using Code.Infrastructure.GameStates.Factory;
 using Code.Infrastructure.GameStates.Machine;
 using Code.Infrastructure.GameStates.States;
+using Code.Infrastructure.Levels;
 using Code.Infrastructure.Scenes;
 using Code.Infrastructure.Systems;
 using Code.Infrastructure.View.Factory;
@@ -64,6 +65,7 @@ namespace Code.Infrastructure.Installers
 
     private void BindInfrastructureServices()
     {
+      Container.BindInterfacesTo<LevelDataProvider>().AsSingle();
       Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
       Container.Bind<IAssetProvider>().To<AssetProvider>().AsSingle();
       
