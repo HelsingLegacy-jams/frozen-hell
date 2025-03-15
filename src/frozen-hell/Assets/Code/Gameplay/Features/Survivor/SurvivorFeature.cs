@@ -8,6 +8,8 @@ namespace Code.Gameplay.Features.Survivor
     public SurvivorFeature(ISystemFactory systems)
     {
       Add(systems.Create<InitializeSurvivorSystem>());
+      
+      Add(systems.Create<SurvivorAnimationProvidingSystem>());
     }
   }
 }

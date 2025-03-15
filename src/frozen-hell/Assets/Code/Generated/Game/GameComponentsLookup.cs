@@ -57,13 +57,14 @@ public static class GameComponentsLookup {
     public const int StarterCondition = 46;
     public const int StatusViews = 47;
     public const int ThirstView = 48;
-    public const int Busy = 49;
-    public const int ReadyToAction = 50;
-    public const int ReadyToCollections = 51;
-    public const int Survivor = 52;
-    public const int SurvivorAnimator = 53;
+    public const int AnimationTypeId = 49;
+    public const int Busy = 50;
+    public const int ReadyToAction = 51;
+    public const int ReadyToCollections = 52;
+    public const int Survivor = 53;
+    public const int SurvivorAnimator = 54;
 
-    public const int TotalComponents = 54;
+    public const int TotalComponents = 55;
 
     public static readonly string[] componentNames = {
         "View",
@@ -115,6 +116,7 @@ public static class GameComponentsLookup {
         "StarterCondition",
         "StatusViews",
         "ThirstView",
+        "AnimationTypeId",
         "Busy",
         "ReadyToAction",
         "ReadyToCollections",
@@ -172,6 +174,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Statuses.StarterCondition),
         typeof(Code.Gameplay.Features.Statuses.StatusViews),
         typeof(Code.Gameplay.Features.Statuses.ThirstView),
+        typeof(Code.Gameplay.Features.Survivor.AnimationTypeIdComponent),
         typeof(Code.Gameplay.Features.Survivor.Busy),
         typeof(Code.Gameplay.Features.Survivor.ReadyToAction),
         typeof(Code.Gameplay.Features.Survivor.ReadyToCollections),

@@ -9,4 +9,5 @@ namespace Code.Gameplay.Features.Survivor
   [Game] public class ReadyToCollections : IComponent {}
   
   [Game] public class SurvivorAnimatorComponent : IComponent { public SurvivorAnimator Value; }
+  [Game] public class AnimationTypeIdComponent : IComponent { public AnimationTypeId Value; }
 }

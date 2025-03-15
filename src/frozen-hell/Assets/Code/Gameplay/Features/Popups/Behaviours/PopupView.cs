@@ -1,4 +1,5 @@
 ﻿using Code.Common.Extensions;
+using Code.Gameplay.Features.Survivor;
 using Code.Gameplay.Features.Survivor.Provider;
 using Code.Infrastructure.View;
 using TMPro;
@@ -32,6 +33,7 @@ namespace Code.Gameplay.Features.Popups.Behaviours
     private void Breaching()
     {
       _survivor.Entity.AddDestination(_interactorView.Entity.Transform.position);
+      _survivor.Entity.AddAnimationTypeId(AnimationTypeId.Breach);
       _survivor.Entity.isMovingToInteract = true;
       _survivor.Entity.isBusy = true;
       _survivor.Entity.isMoving = true;
@@ -43,6 +45,7 @@ namespace Code.Gameplay.Features.Popups.Behaviours
     private void Consuming()
     {
       _survivor.Entity.AddDestination(_interactorView.Entity.Transform.position);
+      _survivor.Entity.AddAnimationTypeId(AnimationTypeId.Collect);
       _survivor.Entity.isBusy = true;
       _survivor.Entity.isMoving = true;
       _survivor.Entity.isMovingToInteract = true;
