@@ -29,10 +29,6 @@ namespace Code.Gameplay.Features.Statuses.Behaviours
           .AddIncrement(2f)
           .AddDeadlyCondition(1f)
           
-          .With(x => x.isReadyToResetHunger = true)
-          .With(x => x.isReadyToResetThirst = true)
-          .With(x => x.isReadyToResetCold = true)
-          
           .With(x => x.isReadyToCleanup = true)
         ;
 

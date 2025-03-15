@@ -36,17 +36,22 @@ namespace Code.Gameplay.Features.Interactors.Systems
             survivor.AddConsumeHunger(20f);
             break;
           case InteractorTypeId.RedBerries:
-            survivor.AddConsumeHunger(5f);
-            survivor.AddConsumeThirst(20f);
+            survivor.AddConsumeHunger(15f);
+            survivor.AddConsumeThirst(5f);
             break;
-          case InteractorTypeId.Mushrooms:
+          case InteractorTypeId.YellowMushroom:
             survivor.AddConsumeHunger(25f);
             survivor.AddConsumeCold(5f);
             survivor.AddConsumeThirst(-10f);
             break;
+          case InteractorTypeId.BrownMushroom:
+            survivor.AddConsumeCold(25f);
+            survivor.AddConsumeThirst(10f);
+            break;
         }
         survivor.isReadyToCollections = false;
         interactor.isBreached = false;
+        interactor.isConsumed = false;
         interactor.isInactive = true;
       }
     }

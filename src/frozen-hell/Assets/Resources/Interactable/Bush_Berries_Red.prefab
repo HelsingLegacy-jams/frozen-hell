@@ -149,6 +149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityView: {fileID: -2667832307289834924}
-  _title: Yammy Berries
+  _title: Yummy Berries
   _interactorTypeId: 11
   _isConsumable: 1

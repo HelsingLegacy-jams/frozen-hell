@@ -16,7 +16,8 @@ namespace Code.Gameplay.Features.Interactors.Systems
         .AllOf(
           GameMatcher.Consumed,
           GameMatcher.Consumable,
-          GameMatcher.InteractorTypeId));
+          GameMatcher.InteractorTypeId)
+        .NoneOf(GameMatcher.Breached));
       
       _survivors = game.GetGroup(GameMatcher
         .AllOf(
@@ -33,15 +34,22 @@ namespace Code.Gameplay.Features.Interactors.Systems
         switch (interactor.InteractorTypeId)
         {
           case InteractorTypeId.BlueBerries:
-            survivor.AddConsumeHunger(-10f);
-            survivor.AddConsumeThirst(-10f);
+            survivor.AddConsumeHunger(-25f);
+            survivor.AddConsumeThirst(-25f);
+            survivor.AddConsumeCold(15f);
             break;
           case InteractorTypeId.RedBerries:
-            survivor.AddConsumeHunger(10f);
+            survivor.AddConsumeHunger(25f);
+            survivor.AddConsumeThirst(-15f);
             break;
-          case InteractorTypeId.Mushrooms:
+          case InteractorTypeId.YellowMushroom:
             survivor.AddConsumeHunger(-10f);
             survivor.AddConsumeThirst(20f);
+            break;
+          case InteractorTypeId.BrownMushroom:
+            survivor.AddConsumeHunger(5f);
+            survivor.AddConsumeThirst(30f);
+            survivor.AddConsumeCold(-35f);
             break;
         }
         survivor.isReadyToCollections = false;

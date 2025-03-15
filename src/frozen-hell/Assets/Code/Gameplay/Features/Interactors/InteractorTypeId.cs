@@ -6,7 +6,8 @@
     
     BlueBerries = 10,
     RedBerries = 11,
-    Mushrooms = 13,
+    YellowMushroom = 13,
+    BrownMushroom = 14,
   
     Branches = 41,
     Campfire = 40,
