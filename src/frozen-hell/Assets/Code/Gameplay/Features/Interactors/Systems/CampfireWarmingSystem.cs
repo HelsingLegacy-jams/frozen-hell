@@ -28,7 +28,7 @@ namespace Code.Gameplay.Features.Interactors.Systems
       {
         GameEntity survivorInRange = _physics.SphereCast(campfire.WorldPosition, 5f, CollisionLayer.Survivor.AsMask());
 
-        survivorInRange?.AddConsumeCold(4 * _time.DeltaTime);
+        survivorInRange?.AddConsumeCold(3.5f * _time.DeltaTime);
       }
     }
   }

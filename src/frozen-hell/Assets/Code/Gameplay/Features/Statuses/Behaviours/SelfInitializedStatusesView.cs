@@ -26,7 +26,7 @@ namespace Code.Gameplay.Features.Statuses.Behaviours
           .AddColdView(_cold)
           
           .AddStarterCondition(0f)
-          .AddIncrement(2f)
+          .AddIncrement(1.5f)
           .AddDeadlyCondition(1f)
           
           .With(x => x.isReadyToCleanup = true)

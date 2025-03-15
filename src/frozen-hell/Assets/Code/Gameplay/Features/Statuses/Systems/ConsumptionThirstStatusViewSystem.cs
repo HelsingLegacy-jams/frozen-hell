@@ -27,7 +27,7 @@ namespace Code.Gameplay.Features.Statuses.Systems
       foreach (GameEntity survivor in _survivors.GetEntities(_buffer))
       foreach (GameEntity status in _statuses.GetEntities(_buffer2))
       {
-        status.ThirstView.Updating(status.ColdView.ViewCondition - survivor.ConsumeThirst / 100);
+        status.ThirstView.Updating(status.ThirstView.ViewCondition - survivor.ConsumeThirst / 100);
 
         survivor.RemoveConsumeThirst();
       }
