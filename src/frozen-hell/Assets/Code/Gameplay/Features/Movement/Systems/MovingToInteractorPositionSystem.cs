@@ -19,12 +19,12 @@ namespace Code.Gameplay.Features.Movement.Systems
       _time = time;
       _movers = game.GetGroup(GameMatcher
         .AllOf(
-          GameMatcher.Busy,
           GameMatcher.Speed,
           GameMatcher.Moving,
           GameMatcher.Transform,
           GameMatcher.Destination,
           GameMatcher.CharacterMover,
+          GameMatcher.MovingToInteract,
           GameMatcher.MovementAvailable));
     }
 
@@ -45,6 +45,7 @@ namespace Code.Gameplay.Features.Movement.Systems
         {
           mover.isReadyToAction = true;
           mover.RemoveDestination();
+          mover.isMovingToInteract = false;
           mover.isMoving = false;
         }
       }

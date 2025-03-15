@@ -40,27 +40,29 @@ public static class GameComponentsLookup {
     public const int Destination = 29;
     public const int MovementAvailable = 30;
     public const int Moving = 31;
-    public const int Speed = 32;
-    public const int Inactive = 33;
-    public const int Popup = 34;
-    public const int PopupView = 35;
-    public const int ColdView = 36;
-    public const int DeadlyCondition = 37;
-    public const int HungerView = 38;
-    public const int Increment = 39;
-    public const int Loosed = 40;
-    public const int NotInitialized = 41;
-    public const int ReadyToResetCold = 42;
-    public const int ReadyToResetHunger = 43;
-    public const int ReadyToResetThirst = 44;
-    public const int StarterCondition = 45;
-    public const int StatusViews = 46;
-    public const int ThirstView = 47;
-    public const int Busy = 48;
-    public const int ReadyToAction = 49;
-    public const int Survivor = 50;
+    public const int MovingToInteract = 32;
+    public const int Speed = 33;
+    public const int Inactive = 34;
+    public const int Popup = 35;
+    public const int PopupView = 36;
+    public const int ColdView = 37;
+    public const int DeadlyCondition = 38;
+    public const int HungerView = 39;
+    public const int Increment = 40;
+    public const int Loosed = 41;
+    public const int NotInitialized = 42;
+    public const int ReadyToResetCold = 43;
+    public const int ReadyToResetHunger = 44;
+    public const int ReadyToResetThirst = 45;
+    public const int StarterCondition = 46;
+    public const int StatusViews = 47;
+    public const int ThirstView = 48;
+    public const int Busy = 49;
+    public const int ReadyToAction = 50;
+    public const int ReadyToCollections = 51;
+    public const int Survivor = 52;
 
-    public const int TotalComponents = 51;
+    public const int TotalComponents = 53;
 
     public static readonly string[] componentNames = {
         "View",
@@ -95,6 +97,7 @@ public static class GameComponentsLookup {
         "Destination",
         "MovementAvailable",
         "Moving",
+        "MovingToInteract",
         "Speed",
         "Inactive",
         "Popup",
@@ -113,6 +116,7 @@ public static class GameComponentsLookup {
         "ThirstView",
         "Busy",
         "ReadyToAction",
+        "ReadyToCollections",
         "Survivor"
     };
 
@@ -149,6 +153,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Movement.Destination),
         typeof(Code.Gameplay.Features.Movement.MovementAvailable),
         typeof(Code.Gameplay.Features.Movement.Moving),
+        typeof(Code.Gameplay.Features.Movement.MovingToInteract),
         typeof(Code.Gameplay.Features.Movement.Speed),
         typeof(Code.Gameplay.Features.Popups.Inactive),
         typeof(Code.Gameplay.Features.Popups.Popup),
@@ -167,6 +172,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Statuses.ThirstView),
         typeof(Code.Gameplay.Features.Survivor.Busy),
         typeof(Code.Gameplay.Features.Survivor.ReadyToAction),
+        typeof(Code.Gameplay.Features.Survivor.ReadyToCollections),
         typeof(Code.Gameplay.Features.Survivor.Survivor)
     };
 }

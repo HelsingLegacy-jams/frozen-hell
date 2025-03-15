@@ -32,6 +32,7 @@ namespace Code.Gameplay.Features.Popups.Behaviours
     private void Breaching()
     {
       _survivor.Entity.AddDestination(_interactorView.Entity.Transform.position);
+      _survivor.Entity.isMovingToInteract = true;
       _survivor.Entity.isBusy = true;
       _survivor.Entity.isMoving = true;
 
@@ -44,6 +45,7 @@ namespace Code.Gameplay.Features.Popups.Behaviours
       _survivor.Entity.AddDestination(_interactorView.Entity.Transform.position);
       _survivor.Entity.isBusy = true;
       _survivor.Entity.isMoving = true;
+      _survivor.Entity.isMovingToInteract = true;
 
       _interactorView.Entity.isConsumed = true;
       Hide();

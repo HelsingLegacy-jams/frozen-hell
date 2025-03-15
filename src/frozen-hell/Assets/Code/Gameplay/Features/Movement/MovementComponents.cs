@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Code.Gameplay.Features.Movement
 {
+  [Game] public class MovingToInteract : IComponent {}
   [Game] public class Moving : IComponent {}
   [Game] public class MovementAvailable : IComponent {}
   

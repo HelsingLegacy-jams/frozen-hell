@@ -19,8 +19,8 @@ namespace Code.Gameplay.Features.Interactors.Systems
       
       _survivors = game.GetGroup(GameMatcher
         .AllOf(
-          GameMatcher.ReadyToAction,
-          GameMatcher.Survivor
+          GameMatcher.Survivor,
+          GameMatcher.ReadyToCollections
           ));
     }
 

@@ -1,5 +1,6 @@
 using Code.Gameplay.Features.Cameras.Service;
 using Entitas;
+using UnityEngine;
 
 namespace Code.Gameplay.Features.Popups.Systems
 {
@@ -21,7 +22,8 @@ namespace Code.Gameplay.Features.Popups.Systems
     {
       foreach (GameEntity popup in _popups)
       {
-        popup.Transform.LookAt(popup.Transform.position - _camera.Entity.Transform.position);
+        Vector3 direction = (popup.Transform.position - _camera.Entity.Transform.position).normalized;
+        popup.Transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
       }
     }
   }

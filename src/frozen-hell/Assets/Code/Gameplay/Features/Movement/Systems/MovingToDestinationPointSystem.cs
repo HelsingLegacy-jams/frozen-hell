@@ -25,7 +25,7 @@ namespace Code.Gameplay.Features.Movement.Systems
           GameMatcher.Destination,
           GameMatcher.CharacterMover,
           GameMatcher.MovementAvailable)
-        .NoneOf(GameMatcher.Busy));
+        .NoneOf(GameMatcher.MovingToInteract));
     }
 
     public void Execute()
@@ -44,6 +44,7 @@ namespace Code.Gameplay.Features.Movement.Systems
         else
         {
           mover.RemoveDestination();
+          mover.isBusy = false;
           mover.isMoving = false;
         }
       }
