@@ -45,24 +45,27 @@ public static class GameComponentsLookup {
     public const int Inactive = 34;
     public const int Popup = 35;
     public const int PopupView = 36;
-    public const int ColdView = 37;
-    public const int DeadlyCondition = 38;
-    public const int HungerView = 39;
-    public const int Increment = 40;
-    public const int Loosed = 41;
-    public const int NotInitialized = 42;
-    public const int ReadyToResetCold = 43;
-    public const int ReadyToResetHunger = 44;
-    public const int ReadyToResetThirst = 45;
-    public const int StarterCondition = 46;
-    public const int StatusViews = 47;
-    public const int ThirstView = 48;
-    public const int Busy = 49;
-    public const int ReadyToAction = 50;
-    public const int ReadyToCollections = 51;
-    public const int Survivor = 52;
+    public const int PromiseAnimationId = 37;
+    public const int ColdView = 38;
+    public const int DeadlyCondition = 39;
+    public const int HungerView = 40;
+    public const int Increment = 41;
+    public const int Loosed = 42;
+    public const int NotInitialized = 43;
+    public const int ReadyToResetCold = 44;
+    public const int ReadyToResetHunger = 45;
+    public const int ReadyToResetThirst = 46;
+    public const int StarterCondition = 47;
+    public const int StatusViews = 48;
+    public const int ThirstView = 49;
+    public const int AnimationTypeId = 50;
+    public const int Busy = 51;
+    public const int ReadyToAction = 52;
+    public const int ReadyToCollections = 53;
+    public const int Survivor = 54;
+    public const int SurvivorAnimator = 55;
 
-    public const int TotalComponents = 53;
+    public const int TotalComponents = 56;
 
     public static readonly string[] componentNames = {
         "View",
@@ -102,6 +105,7 @@ public static class GameComponentsLookup {
         "Inactive",
         "Popup",
         "PopupView",
+        "PromiseAnimationId",
         "ColdView",
         "DeadlyCondition",
         "HungerView",
@@ -114,10 +118,12 @@ public static class GameComponentsLookup {
         "StarterCondition",
         "StatusViews",
         "ThirstView",
+        "AnimationTypeId",
         "Busy",
         "ReadyToAction",
         "ReadyToCollections",
-        "Survivor"
+        "Survivor",
+        "SurvivorAnimator"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -158,6 +164,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Popups.Inactive),
         typeof(Code.Gameplay.Features.Popups.Popup),
         typeof(Code.Gameplay.Features.Popups.PopupViewComponent),
+        typeof(Code.Gameplay.Features.Popups.PromiseAnimationId),
         typeof(Code.Gameplay.Features.Statuses.ColdView),
         typeof(Code.Gameplay.Features.Statuses.DeadlyCondition),
         typeof(Code.Gameplay.Features.Statuses.HungerView),
@@ -170,9 +177,11 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Statuses.StarterCondition),
         typeof(Code.Gameplay.Features.Statuses.StatusViews),
         typeof(Code.Gameplay.Features.Statuses.ThirstView),
+        typeof(Code.Gameplay.Features.Survivor.AnimationTypeIdComponent),
         typeof(Code.Gameplay.Features.Survivor.Busy),
         typeof(Code.Gameplay.Features.Survivor.ReadyToAction),
         typeof(Code.Gameplay.Features.Survivor.ReadyToCollections),
-        typeof(Code.Gameplay.Features.Survivor.Survivor)
+        typeof(Code.Gameplay.Features.Survivor.Survivor),
+        typeof(Code.Gameplay.Features.Survivor.SurvivorAnimatorComponent)
     };
 }

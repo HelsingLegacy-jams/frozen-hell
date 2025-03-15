@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Code.Gameplay.Common.Physics;
 using Code.Gameplay.Features.Cameras.Service;
+using Code.Gameplay.Features.Survivor;
 using Entitas;
 using UnityEngine;
 
@@ -43,6 +44,7 @@ namespace Code.Gameplay.Features.Input.Systems
         survivor.AddDestination(point);
         survivor.isMoving = input.isMovementProvided;
         survivor.isBusy = true;
+        survivor.AddAnimationTypeId(AnimationTypeId.Move);
       }
     }
   }
