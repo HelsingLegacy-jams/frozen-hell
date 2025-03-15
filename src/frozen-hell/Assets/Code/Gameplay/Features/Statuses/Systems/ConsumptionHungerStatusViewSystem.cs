@@ -7,18 +7,18 @@ namespace Code.Gameplay.Features.Statuses.Systems
   {
     private readonly IGroup<GameEntity> _statuses;
     private readonly IGroup<GameEntity> _survivors;
-    private readonly List<GameEntity> _buffer = new (1);
-    private readonly List<GameEntity> _buffer2 = new (8);
+    private readonly List<GameEntity> _buffer = new(1);
+    private readonly List<GameEntity> _buffer2 = new(8);
 
     public ConsumptionHungerStatusViewSystem(GameContext game)
     {
       _statuses = game.GetGroup(GameMatcher
         .AllOf(
           GameMatcher.HungerView));
-            
+
       _survivors = game.GetGroup(GameMatcher
         .AllOf(
-          GameMatcher.Survivor, 
+          GameMatcher.Survivor,
           GameMatcher.ConsumeHunger));
     }
 
@@ -27,7 +27,7 @@ namespace Code.Gameplay.Features.Statuses.Systems
       foreach (GameEntity survivor in _survivors.GetEntities(_buffer))
       foreach (GameEntity status in _statuses.GetEntities(_buffer2))
       {
-        status.HungerView.Updating(survivor.ConsumeHunger/100 * -1);
+        status.HungerView.Updating(status.ColdView.ViewCondition - survivor.ConsumeHunger / 100);
 
         survivor.RemoveConsumeHunger();
       }

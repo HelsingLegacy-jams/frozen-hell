@@ -7,6 +7,7 @@ namespace Code.Gameplay.Features.Interactors
   {
     public InteractorFeature(ISystemFactory systems)
     {
+      Add(systems.Create<CampfireWarmingSystem>());
       Add(systems.Create<InteractorsConsumingSystem>());
       Add(systems.Create<BreachedInteractorsConsumingSystem>());
 
