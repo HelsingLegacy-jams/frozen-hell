@@ -43,15 +43,15 @@ public static class GameComponentsLookup {
     public const int MovingToInteract = 32;
     public const int Speed = 33;
     public const int Inactive = 34;
-    public const int Popup = 35;
-    public const int PopupView = 36;
-    public const int PromiseAnimationId = 37;
-    public const int ColdView = 38;
-    public const int DeadlyCondition = 39;
-    public const int HungerView = 40;
-    public const int Increment = 41;
-    public const int Loosed = 42;
-    public const int NotInitialized = 43;
+    public const int Loosed = 35;
+    public const int Popup = 36;
+    public const int PopupView = 37;
+    public const int PromiseAnimationId = 38;
+    public const int Win = 39;
+    public const int ColdView = 40;
+    public const int DeadlyCondition = 41;
+    public const int HungerView = 42;
+    public const int Increment = 43;
     public const int ReadyToResetCold = 44;
     public const int ReadyToResetHunger = 45;
     public const int ReadyToResetThirst = 46;
@@ -103,15 +103,15 @@ public static class GameComponentsLookup {
         "MovingToInteract",
         "Speed",
         "Inactive",
+        "Loosed",
         "Popup",
         "PopupView",
         "PromiseAnimationId",
+        "Win",
         "ColdView",
         "DeadlyCondition",
         "HungerView",
         "Increment",
-        "Loosed",
-        "NotInitialized",
         "ReadyToResetCold",
         "ReadyToResetHunger",
         "ReadyToResetThirst",
@@ -162,15 +162,15 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Movement.MovingToInteract),
         typeof(Code.Gameplay.Features.Movement.Speed),
         typeof(Code.Gameplay.Features.Popups.Inactive),
+        typeof(Code.Gameplay.Features.Popups.Loosed),
         typeof(Code.Gameplay.Features.Popups.Popup),
         typeof(Code.Gameplay.Features.Popups.PopupViewComponent),
         typeof(Code.Gameplay.Features.Popups.PromiseAnimationId),
+        typeof(Code.Gameplay.Features.Popups.Win),
         typeof(Code.Gameplay.Features.Statuses.ColdView),
         typeof(Code.Gameplay.Features.Statuses.DeadlyCondition),
         typeof(Code.Gameplay.Features.Statuses.HungerView),
         typeof(Code.Gameplay.Features.Statuses.Increment),
-        typeof(Code.Gameplay.Features.Statuses.Loosed),
-        typeof(Code.Gameplay.Features.Statuses.NotInitialized),
         typeof(Code.Gameplay.Features.Statuses.ReadyToResetCold),
         typeof(Code.Gameplay.Features.Statuses.ReadyToResetHunger),
         typeof(Code.Gameplay.Features.Statuses.ReadyToResetThirst),
