@@ -32,6 +32,8 @@ namespace Code.Gameplay.Features.Statuses.Behaviours
           .With(x => x.isReadyToResetHunger = true)
           .With(x => x.isReadyToResetThirst = true)
           .With(x => x.isReadyToResetCold = true)
+          
+          .With(x => x.isReadyToCleanup = true)
         ;
 
       _entityView.SetEntity(entity);

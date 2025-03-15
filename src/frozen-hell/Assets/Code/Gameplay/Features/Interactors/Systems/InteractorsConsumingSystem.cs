@@ -8,6 +8,7 @@ namespace Code.Gameplay.Features.Interactors.Systems
     private readonly IGroup<GameEntity> _interactors;
     private readonly IGroup<GameEntity> _survivors;
     private readonly List<GameEntity> _buffer = new (1);
+    private readonly List<GameEntity> _buffer2 = new (1);
 
     public InteractorsConsumingSystem(GameContext game)
     {
@@ -26,7 +27,7 @@ namespace Code.Gameplay.Features.Interactors.Systems
 
     public void Execute()
     {
-      foreach (GameEntity interactor in _interactors)
+      foreach (GameEntity interactor in _interactors.GetEntities(_buffer2))
       foreach (GameEntity survivor in _survivors.GetEntities(_buffer))
       {
         switch (interactor.InteractorTypeId)
@@ -43,6 +44,9 @@ namespace Code.Gameplay.Features.Interactors.Systems
             survivor.AddConsumeThirst(20f);
             break;
         }
+        survivor.isReadyToCollections = false;
+        interactor.isConsumed = false;
+        interactor.isInactive = true;
       }
     }
   }
