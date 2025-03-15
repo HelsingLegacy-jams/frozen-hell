@@ -61,8 +61,9 @@ public static class GameComponentsLookup {
     public const int ReadyToAction = 50;
     public const int ReadyToCollections = 51;
     public const int Survivor = 52;
+    public const int SurvivorAnimator = 53;
 
-    public const int TotalComponents = 53;
+    public const int TotalComponents = 54;
 
     public static readonly string[] componentNames = {
         "View",
@@ -117,7 +118,8 @@ public static class GameComponentsLookup {
         "Busy",
         "ReadyToAction",
         "ReadyToCollections",
-        "Survivor"
+        "Survivor",
+        "SurvivorAnimator"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -173,6 +175,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Survivor.Busy),
         typeof(Code.Gameplay.Features.Survivor.ReadyToAction),
         typeof(Code.Gameplay.Features.Survivor.ReadyToCollections),
-        typeof(Code.Gameplay.Features.Survivor.Survivor)
+        typeof(Code.Gameplay.Features.Survivor.Survivor),
+        typeof(Code.Gameplay.Features.Survivor.SurvivorAnimatorComponent)
     };
 }

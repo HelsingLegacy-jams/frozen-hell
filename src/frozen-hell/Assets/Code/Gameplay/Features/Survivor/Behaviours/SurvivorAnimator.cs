@@ -9,22 +9,22 @@ namespace Code.Gameplay.Features.Survivor.Behaviours
     private readonly int _breachingHash = Animator.StringToHash("Breaching");
     private readonly int _isPerformingActionHash = Animator.StringToHash("isPerformingAction");
     
-    public Animator Animator;
+    [SerializeField] private Animator _animator;
 
-    public void ResetAbility() => Animator.SetBool(_isPerformingActionHash, false);
-    public void PlayMove() => Animator.SetBool(_isMovingHash, true);
-    public void PlayIdle() => Animator.SetBool(_isMovingHash, false);
+    public void ResetAbility() => _animator.SetBool(_isPerformingActionHash, false);
+    public void PlayMove() => _animator.SetBool(_isMovingHash, true);
+    public void PlayIdle() => _animator.SetBool(_isMovingHash, false);
     
     public void PlayBreaching()
     {
-      Animator.SetBool(_isPerformingActionHash, true);
-      Animator.SetTrigger(_breachingHash);
+      _animator.SetBool(_isPerformingActionHash, true);
+      _animator.SetTrigger(_breachingHash);
     }
     
     public void PlayCollecting()
     {
-      Animator.SetBool(_isPerformingActionHash, true);
-      Animator.SetTrigger(_collectingHash);
+      _animator.SetBool(_isPerformingActionHash, true);
+      _animator.SetTrigger(_collectingHash);
     }
   }
 }
