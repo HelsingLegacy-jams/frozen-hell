@@ -34,19 +34,20 @@ namespace Code.Gameplay.Features.Interactors.Systems
         {
           case InteractorTypeId.BlueBerries:
             survivor.AddConsumeHunger(20f);
+            survivor.AddConsumeCold(5f);
             break;
           case InteractorTypeId.RedBerries:
             survivor.AddConsumeHunger(15f);
             survivor.AddConsumeThirst(5f);
             break;
           case InteractorTypeId.YellowMushroom:
-            survivor.AddConsumeHunger(25f);
+            survivor.AddConsumeHunger(20f);
+            survivor.AddConsumeThirst(-5f);
             survivor.AddConsumeCold(5f);
-            survivor.AddConsumeThirst(-10f);
             break;
           case InteractorTypeId.BrownMushroom:
-            survivor.AddConsumeCold(25f);
             survivor.AddConsumeThirst(10f);
+            survivor.AddConsumeCold(25f);
             break;
         }
         survivor.isReadyToCollections = false;
